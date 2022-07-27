@@ -1,0 +1,52 @@
+.welcomeMessageContainer {
+    -fx-padding: 30 0 0 0;
+}
+.welcomeMessage_1 {
+    -fx-font-family: 'Brush Script MT', cursive;
+    -fx-padding: 0 0 0 20;
+    -fx-font-style: italic;
+    -fx-font-size: 42;
+}
+
+.welcomeMessage_2 {
+    -fx-font-family: 'Brush Script MT', cursive;
+    -fx-font-style: italic;
+    -fx-font-size: 33;
+}
+
+.inputText {
+    -fx-font-family: "Times New Roman", cursive;
+    -fx-font-size: 17;
+    -fx-font-style: italic;
+}
+
+.textFieldInput {
+    -fx-background-image: url("/images/textField.jpg");
+}
+
+.enjoyText {
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 18;
+}
+
+.startBtn {
+    -fx-font-family: "Comic Sans MS";
+    -fx-font-size: 15;
+
+
+    -fx-background-radius: 30em;
+    -fx-min-width: 120px;
+    -fx-min-height: 50px;
+    -fx-max-width: 53px;
+    -fx-max-height: 53px;
+
+    -fx-border-color: #8B0000;
+    -fx-background-color: #FFE4C4;
+    -fx-border-width: 2;
+    -fx-border-radius: 30;
+}
+
+.startBtn:hover {
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.7) , 10,0,0,1 );
+    -fx-effect: innershadow( gaussian , rgba(0,0,0,0.7) , 20,0,0,0 );
+}

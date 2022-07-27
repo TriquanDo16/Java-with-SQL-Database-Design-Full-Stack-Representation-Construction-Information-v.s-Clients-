@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="MyController"
+            fx:id="welcomeMainScene">
+
+    <VBox fx:id="welcomeMessageContainer" styleClass="welcomeMessageContainer" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="30">
+        <Text fx:id="welcomeMessage_1" styleClass="welcomeMessage_1">Database Queries: Construction Degradation - Clients View</Text>
+    </VBox>
+
+    <VBox fx:id="instructMessageContainer" styleClass="instructMessageContainer" AnchorPane.topAnchor="90" AnchorPane.leftAnchor="130">
+        <Text fx:id="welcomeMessage_2" styleClass="welcomeMessage_2" textAlignment="CENTER">Please follow to the instructions !!!</Text>
+    </VBox>
+
+    <VBox fx:id="inputContainer" styleClass="inputContainer" spacing="20" AnchorPane.topAnchor="200" AnchorPane.leftAnchor="40">
+        <HBox fx:id="ipInput" styleClass="ipInput" spacing="122">
+            <Text fx:id="inputText_IP" styleClass="inputText">Can we know your IP?</Text>
+            <TextField fx:id="textField_IP" styleClass="textFieldInput" minWidth="300" promptText="Input your input here"></TextField>
+        </HBox>
+
+        <HBox fx:id="portInput" styleClass="portInput" spacing="75">
+            <Text fx:id="inputTextPort" styleClass="inputText">Please let us know your port :</Text>
+            <TextField fx:id="textField_Port" styleClass="textFieldInput" minWidth="300" promptText="Input your input here"></TextField>
+        </HBox>
+
+        <HBox fx:id="usernameInput" styleClass="usernameInput" spacing="35">
+            <Text fx:id="inputName" styleClass="inputText">How do you want to set user name?</Text>
+            <TextField fx:id="textField_Name" styleClass="textFieldInput" minWidth="300" promptText="Input your input here"></TextField>
+        </HBox>
+    </VBox>
+
+    <VBox AnchorPane.topAnchor="360" AnchorPane.leftAnchor="275">
+        <Button fx:id="startBtn" styleClass="startBtn" onAction="#startBtn_Method">Let connect...!!</Button>
+    </VBox>
+
+    <VBox AnchorPane.topAnchor="430" AnchorPane.leftAnchor="255">
+        <Text fx:id="enjoyText" styleClass="enjoyText">Enjoys your time ... !!!</Text>
+    </VBox>
+
+</AnchorPane>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.ButtonBar.ButtonData?>
+<?import javafx.scene.shape.Line?>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="MyController"
+            fx:id="gamePlayScene">
+
+    <VBox fx:id="menuBarContainer" styleClass="menuBarContainer" AnchorPane.topAnchor="10" AnchorPane.leftAnchor="50">
+        <HBox fx:id="buttonBar" styleClass="buttonBar" spacing="25">
+                <Button fx:id="infoBtn" onAction="#infoBtn_Method">Info</Button>
+                <Button fx:id="newGameBtn" onAction="#newGame_Method">New Game</Button>
+                <Button fx:id="exitBtn" onAction="#exitBtn_Medthod">Exit</Button>
+                <Button fx:id="recordBtn" onAction="#record_Method">Records</Button>
+        </HBox>
+    </VBox>
+
+    <VBox fx:id="currentBalance" styleClass="currentBalance" AnchorPane.topAnchor="20" AnchorPane.rightAnchor="50">
+        <Text>Balance: </Text>
+    </VBox>
+
+<!--    <HBox fx:id="playerCategorize" styleClass="playerCategorize" spacing="300">-->
+<!--        <Text fx:id="text1" styleClass="textName">Players</Text>-->
+<!--        <Text fx:id="text2" styleClass="textName">Bankers</Text>-->
+<!--    </HBox>-->
+
+    <VBox fx:id="gamePlayContainer" styleClass="gamePlayContainer" spacing="25" AnchorPane.topAnchor="80" AnchorPane.leftAnchor="50">
+
+        <HBox fx:id="playerCategorize" styleClass="playerCategorize" spacing="300">
+            <Text fx:id="text1" styleClass="textName">Players</Text>
+            <Text fx:id="text2" styleClass="textName">Bankers</Text>
+        </HBox>
+
+        <HBox styleClass="objectCategorize" spacing="95">
+            <Text fx:id="playerCard" styleClass="playerCard">Players Cards go here</Text>
+            <Line startX="50" startY="200" endX="50" endY="0"></Line>
+            <Text fx:id="bankerCard" styleClass="bankerCard">Bankers Cards go here</Text>
+        </HBox>
+
+        <VBox styleClass="trial">
+            <Button fx:id="startGameCard" styleClass="startGameCard" onAction="#startGameCard">Let's Start</Button>
+        </VBox>
+
+        <HBox fx:id="requireBeforeGame" styleClass="requireBeforeGame" spacing="30">
+                <Text fx:id="moneyBetText" styleClass="moneyBetText">Money Bet?? </Text>
+                <TextField fx:id="moneyInput" styleClass="moneyInpyt" promptText="Input your money here and Make betChoice"></TextField>
+                <Text fx:id="text" styleClass="moneyBetText">of</Text>
+
+                <Button fx:id="playerBtnChoice" styleClass="playerBtnChoice" onAction="#playerBtnChoice">Player</Button>
+                <Button fx:id="drawBtnChoice" styleClass="drawBtnChoice" onAction="#drawBtnChoice">Draw</Button>
+                <Button fx:id="bankerBtnChoice" styleClass="bankerBtnChoice" onAction="#bankerBtnChoice">Banker</Button>
+
+            </HBox>
+
+
+    </VBox>
+
+    <VBox fx:id="resultContainer" styleClass="resultContainer" spacing="20" AnchorPane.bottomAnchor="20">
+        <HBox fx:id="resultDisplay" styleClass="resultDisplay" spacing="100">
+            <Text>Result: </Text>
+            <Text>Current Score:</Text>
+        </HBox>
+    </VBox>
+
+</AnchorPane>

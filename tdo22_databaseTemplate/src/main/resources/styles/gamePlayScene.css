@@ -1,0 +1,49 @@
+.menuBarContainer {
+    -fx-padding: 17 50 20 20;
+}
+
+.gamePlayContainer {
+    -fx-border-color: red;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-border-insets: 5px;
+}
+
+.currentBalance {
+    -fx-padding: 17 50 20 20;
+}
+
+.objectCategorize {
+    -fx-padding: 0 50 20 70;
+}
+
+.trial {
+    -fx-padding: -30 0 0 245;
+}
+
+.hello {
+    -fx-border-color: red;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-border-insets: 5px;
+}
+
+.playerCategorize {
+    -fx-padding: 15 0 0 100;
+}
+
+
+
+
+
+.buttonBar {
+    -fx-border-color: red;
+    -fx-border-width: 2;
+    -fx-border-radius: 10;
+    -fx-border-insets: 5px;
+}
+
+
+.startGameCard {
+}
+
