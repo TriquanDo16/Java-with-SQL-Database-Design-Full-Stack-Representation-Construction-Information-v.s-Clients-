@@ -127,13 +127,21 @@ public class MyController implements Initializable {
      *
      */
 
-    public void BtnInsert(ActionEvent actionEvent) {
+    public void BtnInsert(ActionEvent actionEvent) throws Exception {
         /* TODO: Update Insert page to switch - Allow to:
             1. Choose the table that insert
             2. After choosing, depend on what table to have different type of insert
-                2.1. For
-
+            3. Analyzing duplicate: If duplicate - reject to add in, otherwise, represent successful messages
          */
+
+        // Loading to insert main page
+        FXMLLoader InsertLoader = new FXMLLoader(getClass().getResource("/FXML/databaseQueries_Insert.fxml"));
+        Parent rootInsert = InsertLoader.load();  // load view into parent
+
+        MyController databaseScene = InsertLoader.getController();  //get controller created by FXMLLoader
+        rootInsert.getStylesheets().add("/styles/databaseQueries_MainInstruction.css");   //set style
+
+        this.databaseQueries_MainInstruction.getScene().setRoot(rootInsert); //update scene graph
     }
 
     public void BtnDelete(ActionEvent actionEvent) {
