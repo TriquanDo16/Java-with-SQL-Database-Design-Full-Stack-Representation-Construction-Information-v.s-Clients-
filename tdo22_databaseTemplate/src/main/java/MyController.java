@@ -248,8 +248,24 @@ public class MyController implements Initializable {
     public void Delete_ImageButton(ActionEvent actionEvent) {
     }
 
-    public void Delete_UserBtn(ActionEvent actionEvent) {
+    public void Delete_UserButton(ActionEvent actionEvent) {
         this.Delete_inputTextPort.setText("Hello Khang Ho");
+    }
+
+    public void Delete_EmployeeButton(ActionEvent actionEvent){
+    }
+
+    public void Delete_DepartmentButton(ActionEvent actionEvent){
+    }
+
+    public void Delete_OfficeButton(ActionEvent actionEvent){
+    }
+
+    public void Delete_BackButton(ActionEvent actionEvent){
+    }
+    public void Delete_SubmitButton(ActionEvent actionEvent){
+    }
+    public void Delete_ResetButton(ActionEvent actionEvent){
     }
 
 
@@ -271,7 +287,27 @@ public class MyController implements Initializable {
      *****************
      ***************************************************************************************/
 
+    public void Update_ImageButton(ActionEvent actionEvent) {
+    }
 
+    public void Update_UserButton(ActionEvent actionEvent) {
+    }
+
+    public void Update_EmployeeButton(ActionEvent actionEvent){
+    }
+
+    public void Update_DepartmentButton(ActionEvent actionEvent){
+    }
+
+    public void Update_OfficeButton(ActionEvent actionEvent){
+    }
+
+    public void Update_BackButton(ActionEvent actionEvent){
+    }
+    public void Update_SubmitButton(ActionEvent actionEvent){
+    }
+    public void Update_ResetButton(ActionEvent actionEvent){
+    }
 
 
 
