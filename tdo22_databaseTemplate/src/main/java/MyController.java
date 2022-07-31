@@ -26,6 +26,21 @@ public class MyController implements Initializable {
     private AnchorPane databaseQueries_MainInstruction;
 
     @FXML
+    private AnchorPane databaseQueries_InsertPage;
+
+    @FXML
+    private AnchorPane databaseQueries_DeletePage;
+
+    @FXML
+    private AnchorPane databaseQueries_FindPage;
+
+    @FXML
+    private AnchorPane databaseQueries_UpdatePage;
+
+    @FXML
+    private AnchorPane databaseQueries_ListPage;
+
+    @FXML
     private AnchorPane infoScene;
 
     @FXML
@@ -118,14 +133,12 @@ public class MyController implements Initializable {
 
     }
 
-
-
-
-    /*
-     *
-     *---------------- CONTROLLER FOR DATABASE QUERIES SCENE ----------------- *
-     *
-     */
+    
+    /***************************************************************************************
+     ***************
+     *-------------- CONTROLLER FOR DATABASE QUERIES MAIN_INSTRUCTION SCENE --------------- *
+     ***************
+     ***************************************************************************************/
 
     public void BtnInsert(ActionEvent actionEvent) throws Exception {
         /* TODO: Update Insert page to switch - Allow to:
@@ -138,22 +151,85 @@ public class MyController implements Initializable {
         FXMLLoader InsertLoader = new FXMLLoader(getClass().getResource("/FXML/databaseQueries_Insert.fxml"));
         Parent rootInsert = InsertLoader.load();  // load view into parent
 
-        MyController databaseScene = InsertLoader.getController();  //get controller created by FXMLLoader
+        MyController insertScene = InsertLoader.getController();  //get controller created by FXMLLoader
         rootInsert.getStylesheets().add("/styles/databaseQueries_MainInstruction.css");   //set style
 
         this.databaseQueries_MainInstruction.getScene().setRoot(rootInsert); //update scene graph
     }
 
-    public void BtnDelete(ActionEvent actionEvent) {
+    public void BtnDelete(ActionEvent actionEvent) throws Exception {
+        // Loading to Delete main page
+        FXMLLoader DeleteLoader = new FXMLLoader(getClass().getResource("/FXML/databaseQueries_Delete.fxml"));
+        Parent rootDelete = DeleteLoader.load();  // load view into parent
+
+        MyController deleteScene = DeleteLoader.getController();  //get controller created by FXMLLoader
+        rootDelete.getStylesheets().add("/styles/databaseQueries_Delete.css");   //set style
+
+        this.databaseQueries_MainInstruction.getScene().setRoot(rootDelete); //update scene graph
     }
 
-    public void BtnUpdate(ActionEvent actionEvent) {
+    public void BtnUpdate(ActionEvent actionEvent) throws Exception {
+        // Loading to Update main page
+        FXMLLoader UpdateLoader = new FXMLLoader(getClass().getResource("/FXML/databaseQueries_Update.fxml"));
+        Parent rootUpdate = UpdateLoader.load();  // load view into parent
+
+        MyController updateScene = UpdateLoader.getController();  //get controller created by FXMLLoader
+        rootUpdate.getStylesheets().add("/styles/databaseQueries_Update.fxml.css");   //set style
+
+        this.databaseQueries_MainInstruction.getScene().setRoot(rootUpdate); //update scene graph
     }
 
-    public void BtnTableList(ActionEvent actionEvent) {
+    public void BtnTableList(ActionEvent actionEvent) throws Exception {
+        // Loading to List main page
+        FXMLLoader ListLoader = new FXMLLoader(getClass().getResource("/FXML/databaseQueries_ListAll.fxml"));
+        Parent rootListAll = ListLoader.load();  // load view into parent
+
+        MyController listAllScene = ListLoader.getController();  //get controller created by FXMLLoader
+        rootListAll.getStylesheets().add("/styles/databaseQueries_ListAll.css");   //set style
+
+        this.databaseQueries_MainInstruction.getScene().setRoot(rootListAll); //update scene graph
     }
 
-    public void BtnTableFind(ActionEvent actionEvent) {
+    public void BtnTableFind(ActionEvent actionEvent) throws Exception {
+        // Loading to Find main page
+        FXMLLoader FindLoader = new FXMLLoader(getClass().getResource("/FXML/databaseQueries_Find.fxml"));
+        Parent rootFindPage = FindLoader.load();  // load view into parent
+
+        MyController findItemScene = FindLoader.getController();  //get controller created by FXMLLoader
+        rootFindPage.getStylesheets().add("/styles/databaseQueries_Find.css");   //set style
+
+        this.databaseQueries_MainInstruction.getScene().setRoot(rootFindPage); //update scene graph
     }
 
+
+    /***************************************************************************************
+     *****************
+     *---------------- CONTROLLER FOR DATABASE QUERIES INSERT PAGE SCENE ----------------- *
+     *****************
+     ***************************************************************************************/
+    
+    public void ImageButton(ActionEvent actionEvent) {
+    }
+
+
+    public void UserButton(ActionEvent actionEvent) {
+    }
+
+    public void EmployeeButton(ActionEvent actionEvent) {
+    }
+
+    public void DepartmentButton(ActionEvent actionEvent) {
+    }
+
+    public void OfficeButton(ActionEvent actionEvent) {
+    }
+
+    public void BackButton(ActionEvent actionEvent) {
+    }
+
+    public void SubmitButton(ActionEvent actionEvent) {
+    }
+
+    public void ResetButton(ActionEvent actionEvent) {
+    }
 }
