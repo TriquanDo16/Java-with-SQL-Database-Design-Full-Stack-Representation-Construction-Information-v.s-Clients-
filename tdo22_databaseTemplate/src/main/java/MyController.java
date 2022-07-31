@@ -16,6 +16,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
 
 public class MyController implements Initializable {
 
@@ -54,6 +55,9 @@ public class MyController implements Initializable {
 
     @FXML
     private TextField moneyInput;
+
+    @FXML
+    private Text Delete_inputTextPort;
 
     @FXML
     private Button playerBtnChoice;
@@ -232,4 +236,49 @@ public class MyController implements Initializable {
 
     public void ResetButton(ActionEvent actionEvent) {
     }
+
+
+
+
+    /***************************************************************************************
+     *****************
+     *---------------- CONTROLLER FOR DATABASE QUERIES DELETE PAGE SCENE ----------------- *
+     *****************
+     ***************************************************************************************/
+    public void Delete_ImageButton(ActionEvent actionEvent) {
+    }
+
+    public void Delete_UserBtn(ActionEvent actionEvent) {
+        this.Delete_inputTextPort.setText("Hello Khang Ho");
+    }
+
+
+
+
+    /***************************************************************************************
+     *****************
+     *---------------- CONTROLLER FOR DATABASE QUERIES FIND PAGE SCENE ----------------- *
+     *****************
+     ***************************************************************************************/
+
+
+
+
+
+    /***************************************************************************************
+     *****************
+     *---------------- CONTROLLER FOR DATABASE QUERIES UPDATE PAGE SCENE ----------------- *
+     *****************
+     ***************************************************************************************/
+
+
+
+
+
+    /***************************************************************************************
+     *****************
+     *---------------- CONTROLLER FOR DATABASE QUERIES LIST PAGE SCENE ----------------- *
+     *****************
+     ***************************************************************************************/
+
 }
