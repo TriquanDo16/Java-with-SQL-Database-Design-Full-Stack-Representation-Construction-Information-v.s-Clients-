@@ -5,10 +5,37 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
+<?import javafx.scene.text.Text?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
+            fx:id="databaseQueries_DeletePage"
             fx:controller="MyController"
             prefHeight="400.0" prefWidth="600.0">
 
+    <VBox fx:id="Message_Container" styleClass="Message_Container" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="30">
+        <Text fx:id="Message_1" styleClass="Message_1>"> Which Entities would you like to delete information?</Text>
+    </VBox>
+
+    <VBox fx:id="EntitiesButton_Container" styleClass="EntitiesButton_Container" AnchorPane.rightAnchor="5">
+        <HBox fx:id="Entities_Container" styleClass ="Entities_Container" spacing="5">
+            <Button fx:id="Image_Entity_Button" styleClass="Image_Entity_Button" onAction="#ImageButton">Image</Button>
+            <Button fx:id="User_Entity_Button" styleClass="User_Entity_Button" onAction="#UserButton">User</Button>
+            <Button fx:id="Employee_Entity_Button" styleClass="Employee_Entity_Button" onAction="#EmployeeButton">Employee</Button>
+            <Button fx:id="Department_Entity_Button" styleClass="Department_Entity_Button" onAction="#DepartmentButton">Department</Button>
+            <Button fx:id="Office_Entity_Button" styleClass="Office_Entity_Button" onAction="#OfficeButton">Office</Button>
+        </HBox>
+    </VBox>
+    <VBox fx:id="input_Container" styleClass="input_Container" AnchorPane.bottomAnchor="350" AnchorPane.rightAnchor="50">
+        <HBox fx:id="portInput" styleClass="portInput" spacing="75">
+            <Text fx:id="inputTextPort" styleClass="inputText">Please enter the primary key:</Text>
+            <TextField fx:id="textField_Port" styleClass="textFieldInput" minWidth="300" promptText="Input your input here"></TextField>
+        </HBox>
+    </VBox>
+    <VBox fx:id="FunctionButton_Container" styleClass="FunctionButton_Container" AnchorPane.bottomAnchor="200" AnchorPane.rightAnchor="250">
+        <HBox fx:id="Function_Container" styleClass="Function_Container" spacing="5">
+            <Button fx:id="Back_Button" styleClass="Back_Button" onAction="#BackButton">Back</Button>
+            <Button fx:id="Submit_Button" styleClass="Submit_Button" onAction="#SubmitButton">Submit</Button>
+            <Button fx:id="Reset_Button" styleClass="Reset_Button" onAction="#ResetButton">Reset</Button>
+        </HBox>
+    </VBox>
 </AnchorPane>
