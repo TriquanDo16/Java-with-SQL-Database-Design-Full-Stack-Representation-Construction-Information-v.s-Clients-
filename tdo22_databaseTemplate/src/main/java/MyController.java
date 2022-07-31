@@ -212,29 +212,30 @@ public class MyController implements Initializable {
      *****************
      ***************************************************************************************/
     
-    public void ImageButton(ActionEvent actionEvent) {
+    public void Insert_ImageButton(ActionEvent actionEvent) {
+        this.Insert_ImageButton(actionEvent);
     }
 
 
-    public void UserButton(ActionEvent actionEvent) {
+    public void Insert_UserButton(ActionEvent actionEvent) {
     }
 
-    public void EmployeeButton(ActionEvent actionEvent) {
+    public void Insert_EmployeeButton(ActionEvent actionEvent) {
     }
 
-    public void DepartmentButton(ActionEvent actionEvent) {
+    public void Insert_DepartmentButton(ActionEvent actionEvent) {
     }
 
-    public void OfficeButton(ActionEvent actionEvent) {
+    public void Insert_OfficeButton(ActionEvent actionEvent) {
     }
 
-    public void BackButton(ActionEvent actionEvent) {
+    public void Insert_BackButton(ActionEvent actionEvent) {
     }
 
-    public void SubmitButton(ActionEvent actionEvent) {
+    public void Insert_SubmitButton(ActionEvent actionEvent) {
     }
 
-    public void ResetButton(ActionEvent actionEvent) {
+    public void Insert_ResetButton(ActionEvent actionEvent) {
     }
 
 
@@ -277,7 +278,27 @@ public class MyController implements Initializable {
      *****************
      ***************************************************************************************/
 
+    public void Find_ImageButton(ActionEvent actionEvent) {
+    }
 
+    public void Find_UserButton(ActionEvent actionEvent) {
+    }
+
+    public void Find_EmployeeButton(ActionEvent actionEvent){
+    }
+
+    public void Find_DepartmentButton(ActionEvent actionEvent){
+    }
+
+    public void Find_OfficeButton(ActionEvent actionEvent){
+    }
+
+    public void Find_BackButton(ActionEvent actionEvent){
+    }
+    public void Find_SubmitButton(ActionEvent actionEvent){
+    }
+    public void Find_ResetButton(ActionEvent actionEvent){
+    }
 
 
 

@@ -13,25 +13,59 @@
             fx:controller="MyController"
             prefHeight="400.0" prefWidth="600.0">
 
-    <VBox fx:id="Message_Container" styleClass="Message_Container" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="30">
+    <VBox fx:id="Insert_Message_Container" styleClass="Insert_Message_Container" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="30">
         <Text fx:id="Message_1" styleClass="Message_1>"> Which Entities would you like to add information?</Text>
     </VBox>
 
-    <VBox fx:id="EntitiesButton_Container" styleClass="EntitiesButton_Container" AnchorPane.rightAnchor="5">
-        <HBox fx:id="Entities_Container" styleClass ="Entities_Container" spacing="5">
-            <Button fx:id="Image_Entity_Button" styleClass="Image_Entity_Button" onAction="#ImageButton">Image</Button>
-            <Button fx:id="User_Entity_Button" styleClass="User_Entity_Button" onAction="#UserButton">User</Button>
-            <Button fx:id="Employee_Entity_Button" styleClass="Employee_Entity_Button" onAction="#EmployeeButton">Employee</Button>
-            <Button fx:id="Department_Entity_Button" styleClass="Department_Entity_Button" onAction="#DepartmentButton">Department</Button>
-            <Button fx:id="Office_Entity_Button" styleClass="Office_Entity_Button" onAction="#OfficeButton">Office</Button>
+    <VBox fx:id="Insert_EntitiesButton_Container" styleClass="Insert_EntitiesButton_Container" AnchorPane.rightAnchor="5">
+        <HBox fx:id="Insert_Entities_Container" styleClass ="Insert_Entities_Container" spacing="5">
+            <Button fx:id="Insert_Image_Entity_Button" styleClass="Insert_Image_Entity_Button" onAction="#Insert_ImageButton">Image</Button>
+            <Button fx:id="Insert_User_Entity_Button" styleClass="Insert_User_Entity_Button" onAction="#Insert_UserButton">User</Button>
+            <Button fx:id="Insert_Employee_Entity_Button" styleClass="Insert_Employee_Entity_Button" onAction="#Insert_EmployeeButton">Employee</Button>
+            <Button fx:id="Insert_Department_Entity_Button" styleClass="Insert_Department_Entity_Button" onAction="#Insert_DepartmentButton">Department</Button>
+            <Button fx:id="Insert_Office_Entity_Button" styleClass="Insert_Office_Entity_Button" onAction="#Insert_OfficeButton">Office</Button>
+        </HBox>
+    </VBox>
+    <VBox fx:id="Insert_ImageDataInput_Container" styleClass="Insert_ImageDataInput_Container" AnchorPane.rightAnchor="125" AnchorPane.bottomAnchor="250">
+        <HBox fx:id="Insert_Image_ID" styleClass="Insert_Image_ID" AnchorPane.bottomAnchor="350" AnchorPane.rightAnchor="50">
+                <Text fx:id="Insert_Text_Image_ID" styleClass="Text_Image_ID">Image ID:</Text>
+                <TextField fx:id="Insert_TextField_Image_ID" styleClass="Insert_TextField_Image_ID" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Insert_Address" styleClass="Insert_Address" AnchorPane.bottomAnchor="400" AnchorPane.rightAnchor="50">
+            <Text fx:id="Insert_Text_Address" styleClass="Insert_Text_Address">Address:</Text>
+            <TextField fx:id="Insert_textField_Address" styleClass="Insert_textField_Address" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Insert_Description" styleClass="Insert_Description" AnchorPane.bottomAnchor="450" AnchorPane.rightAnchor="50">
+            <Text fx:id="Insert_Text_Description" styleClass="Insert_Text_Description">Description:</Text>
+            <TextField fx:id="Insert_TextField_Description" styleClass="Insert_TextField_Description" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Insert_Status" styleClass="Insert_Status" AnchorPane.bottomAnchor="500" AnchorPane.rightAnchor="50">
+            <Text fx:id="Insert_Text_Status" styleClass="Insert_Text_Status">Status: </Text>
+            <TextField fx:id="Insert_TextField_Status" styleClass="Insert_Textfield_Status" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Insert_Department" styleClass="Insert_Department" AnchorPane.bottomAnchor="550" AnchorPane.rightAnchor="50">
+            <Text fx:id="Insert_Text_Department" styleClass="Insert_Text_Department">Department :</Text>
+            <TextField fx:id="Insert_TextField_Department" styleClass="Insert_TextField_Department" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Insert_Time_Checked" styleClass="Insert_Time_Checked" AnchorPane.bottomAnchor="550" AnchorPane.rightAnchor="50">
+            <Text fx:id="Insert_Text_Time_Checked" styleClass="Insert_Text_Time_Checked">Time Checked :</Text>
+            <TextField fx:id="Insert_TextField_Time_Checked" styleClass="Insert_TextField_Time_Checked" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Insert_Owner" styleClass="Insert_Owner" AnchorPane.bottomAnchor="550" AnchorPane.rightAnchor="50">
+            <Text fx:id="Insert_Text_Owner" styleClass="Insert_Owner">Owner:</Text>
+            <TextField fx:id="Insert_TextField_Owner" styleClass="Insert_TextField_Owner" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Insert_Time_Posted" styleClass="Insert_Time_Posted" AnchorPane.bottomAnchor="550" AnchorPane.rightAnchor="50">
+            <Text fx:id="Insert_Text_Time_Posted" styleClass="Insert_Text_Time_Posted">Time Posted:</Text>
+            <TextField fx:id="Insert_TextField_Time_Posted" styleClass="Insert_TextField_Time_Posted" minWidth="300" promptText="Input your data here"></TextField>
         </HBox>
     </VBox>
 
-    <VBox fx:id="FunctionButton_Container" styleClass="FunctionButton_Container" AnchorPane.bottomAnchor="200" AnchorPane.rightAnchor="250">
-        <HBox fx:id="Function_Container" styleClass="Function_Container" spacing="5">
-            <Button fx:id="Back_Button" styleClass="Back_Button" onAction="#BackButton">Back</Button>
-            <Button fx:id="Submit_Button" styleClass="Submit_Button" onAction="#SubmitButton">Submit</Button>
-            <Button fx:id="Reset_Button" styleClass="Reset_Button" onAction="#ResetButton">Reset</Button>
+    <VBox fx:id="Insert_FunctionButton_Container" styleClass="Insert_FunctionButton_Container" AnchorPane.bottomAnchor="200" AnchorPane.rightAnchor="250">
+        <HBox fx:id="Insert_Function_Container" styleClass="Insert_Function_Container" spacing="5">
+            <Button fx:id="Insert_Back_Button" styleClass="Back_Button" onAction="#Insert_BackButton">Back</Button>
+            <Button fx:id="Insert_Submit_Button" styleClass="Submit_Button" onAction="#Insert_SubmitButton">Submit</Button>
+            <Button fx:id="Insert_Reset_Button" styleClass="Reset_Button" onAction="#Insert_ResetButton">Reset</Button>
         </HBox>
     </VBox>
 </AnchorPane>

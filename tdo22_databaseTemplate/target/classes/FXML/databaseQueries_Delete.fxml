@@ -33,9 +33,9 @@
     </VBox>
     <VBox fx:id="Delete_FunctionButton_Container" styleClass="Delete_FunctionButton_Container" AnchorPane.bottomAnchor="200" AnchorPane.rightAnchor="250">
         <HBox fx:id="Delete_Function_Container" styleClass="Delete_Function_Container" spacing="5">
-            <Button fx:id="Delete_Back_Button" styleClass="Delete_Back_Button" onAction="#BackButton">Back</Button>
-            <Button fx:id="Delete_Submit_Button" styleClass="Delete_Submit_Button" onAction="#SubmitButton">Submit</Button>
-            <Button fx:id="Delete_Reset_Button" styleClass="Delete_Reset_Button" onAction="#ResetButton">Reset</Button>
+            <Button fx:id="Delete_Back_Button" styleClass="Delete_Back_Button" onAction="#Delete_BackButton">Back</Button>
+            <Button fx:id="Delete_Submit_Button" styleClass="Delete_Submit_Button" onAction="#Delete_SubmitButton">Submit</Button>
+            <Button fx:id="Delete_Reset_Button" styleClass="Delete_Reset_Button" onAction="#Delete_ResetButton">Reset</Button>
         </HBox>
     </VBox>
 </AnchorPane>

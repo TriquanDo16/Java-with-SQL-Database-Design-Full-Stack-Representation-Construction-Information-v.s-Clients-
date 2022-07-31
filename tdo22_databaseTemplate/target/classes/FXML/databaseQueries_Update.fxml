@@ -27,6 +27,13 @@
         </HBox>
     </VBox>
 
+    <VBox fx:id="Delete_input_Container" styleClass="Delete_input_Container" AnchorPane.bottomAnchor="350" AnchorPane.rightAnchor="50">
+        <HBox fx:id="Delete_portInput" styleClass="Delete_portInput" spacing="75">
+            <Text fx:id="Delete_inputTextPort" styleClass="Delete_inputText">Please enter the primary key:</Text>
+            <TextField fx:id="Delete_textField_Port" styleClass="Delete_textFieldInput" minWidth="300" promptText="Input your input here"></TextField>
+        </HBox>
+    </VBox>
+
     <VBox fx:id="Update_FunctionButton_Container" styleClass="Update_FunctionButton_Container" AnchorPane.bottomAnchor="200" AnchorPane.rightAnchor="250">
         <HBox fx:id="Update_Function_Container" styleClass="Update_Function_Container" spacing="5">
             <Button fx:id="Update_Back_Button" styleClass="Update_Back_Button" onAction="#Update_BackButton">Back</Button>
