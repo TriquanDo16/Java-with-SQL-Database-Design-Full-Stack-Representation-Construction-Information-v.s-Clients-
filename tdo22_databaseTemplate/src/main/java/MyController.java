@@ -133,7 +133,7 @@ public class MyController implements Initializable {
 
     }
 
-    
+
     /***************************************************************************************
      ***************
      *-------------- CONTROLLER FOR DATABASE QUERIES MAIN_INSTRUCTION SCENE --------------- *
