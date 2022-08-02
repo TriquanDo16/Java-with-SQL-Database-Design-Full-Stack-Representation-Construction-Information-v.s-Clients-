@@ -18,7 +18,7 @@
     <HBox fx:id = "Container" styleClass="MainInstruction_Containers" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="30">
         <VBox fx:id="Container_instruction">
 
-            <Label  fx:id="Container_instruction_text" styleClass="Container_instruction_text" text="${'Break\nLine'}">
+            <Label  fx:id="Container_instruction_text" styleClass="Container_instruction_text" text="${'What would you like to do?'}">
 
 
 
@@ -36,5 +36,13 @@
         </VBox>
 
     </HBox>
+
+    <VBox fx:id="Instruction_FunctionButton_Container" styleClass="Insert_FunctionButton_Container" AnchorPane.bottomAnchor="200" AnchorPane.rightAnchor="250">
+        <HBox fx:id="Instruction_Function_Container" styleClass="Insert_Function_Container" spacing="5">
+            <Button fx:id="Instruction_Back_Button" styleClass="Instruction_Back_Button" onAction="#Instruction_BackButton">Back</Button>
+            <Button fx:id="Instruction_Submit_Button" styleClass="Instruction_Submit_Button" onAction="#Instruction_SubmitButton">Submit</Button>
+            <Button fx:id="Instruction_Reset_Button" styleClass="Instruction_Reset_Button" onAction="#Instruction_ResetButton">Reset</Button>
+        </HBox>
+    </VBox>
 
 </AnchorPane>
