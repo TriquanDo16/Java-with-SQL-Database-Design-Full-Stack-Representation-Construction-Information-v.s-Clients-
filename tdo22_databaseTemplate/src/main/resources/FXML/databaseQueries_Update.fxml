@@ -5,6 +5,7 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
@@ -23,6 +24,13 @@
             <Button fx:id="Employee_Entity_Button" styleClass="Employee_Entity_Button" onAction="#EmployeeButton">Employee</Button>
             <Button fx:id="Department_Entity_Button" styleClass="Department_Entity_Button" onAction="#DepartmentButton">Department</Button>
             <Button fx:id="Office_Entity_Button" styleClass="Office_Entity_Button" onAction="#OfficeButton">Office</Button>
+        </HBox>
+    </VBox>
+
+    <VBox fx:id="Find_input_Container" styleClass="Find_input_Container" AnchorPane.bottomAnchor="350" AnchorPane.rightAnchor="50" visible="false">
+        <HBox fx:id="Find_portInput" styleClass="Find_portInput" spacing="75">
+            <Text fx:id="Delete_inputTextPort" styleClass="Delete_inputText">Please enter the primary key:</Text>
+            <TextField fx:id="Find_textField_Port" styleClass="Find_textFieldInput" minWidth="300" promptText="Input your input here"></TextField>
         </HBox>
     </VBox>
 

@@ -26,9 +26,9 @@
             <Button fx:id="Find_Office_Entity_Button" styleClass="Find_Office_Entity_Button" onAction="#Find_OfficeButton">Office</Button>
         </HBox>
     </VBox>
-    <VBox fx:id="Find_input_Container" styleClass="Find_input_Container" AnchorPane.bottomAnchor="350" AnchorPane.rightAnchor="50">
+    <VBox fx:id="Find_input_Container" styleClass="Find_input_Container" AnchorPane.bottomAnchor="350" AnchorPane.rightAnchor="50" visible="false">
         <HBox fx:id="Find_portInput" styleClass="Find_portInput" spacing="75">
-            <Text fx:id="Find_inputTextPort" styleClass="Find_inputText">Please enter the primary key:</Text>
+            <Text fx:id="Find_inputText" styleClass="Find_inputText">Please enter the primary key:</Text>
             <TextField fx:id="Find_textField_Port" styleClass="Find_textFieldInput" minWidth="300" promptText="Input your input here"></TextField>
         </HBox>
     </VBox>

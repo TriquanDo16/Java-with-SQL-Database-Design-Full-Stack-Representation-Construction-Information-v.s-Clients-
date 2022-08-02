@@ -13,32 +13,32 @@
             fx:controller="MyController"
             prefHeight="400.0" prefWidth="600.0">
 
-    <VBox fx:id="Update_Message_Container" styleClass="Update_Message_Container" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="30">
+    <VBox fx:id="Message_Container" styleClass="Message_Container" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="30">
         <Text fx:id="Message_1" styleClass="Message_1>"> Which Entities would you like to update information?</Text>
     </VBox>
 
-    <VBox fx:id="Update_EntitiesButton_Container" styleClass="Update_EntitiesButton_Container" AnchorPane.rightAnchor="5">
-        <HBox fx:id="Update_Entities_Container" styleClass ="Update_Entities_Container" spacing="5">
-            <Button fx:id="Update_Image_Entity_Button" styleClass="Update_Image_Entity_Button" onAction="#Update_ImageButton">Image</Button>
-            <Button fx:id="Update_User_Entity_Button" styleClass="Update_User_Entity_Button" onAction="#Update_UserButton">User</Button>
-            <Button fx:id="Update_Employee_Entity_Button" styleClass="Update_Employee_Entity_Button" onAction="#Update_EmployeeButton">Employee</Button>
-            <Button fx:id="Update_Department_Entity_Button" styleClass="Update_Department_Entity_Button" onAction="#Update_DepartmentButton">Department</Button>
-            <Button fx:id="Update_Office_Entity_Button" styleClass="Update_Office_Entity_Button" onAction="#Update_OfficeButton">Office</Button>
+    <VBox fx:id="EntitiesButton_Container" styleClass="EntitiesButton_Container" AnchorPane.rightAnchor="5">
+        <HBox fx:id="Entities_Container" styleClass ="Entities_Container" spacing="5">
+            <Button fx:id="Image_Entity_Button" styleClass="Image_Entity_Button" onAction="#Find_ImageButton">Image</Button>
+            <Button fx:id="User_Entity_Button" styleClass="User_Entity_Button" onAction="#Find_UserButton">User</Button>
+            <Button fx:id="Employee_Entity_Button" styleClass="Employee_Entity_Button" onAction="#Find_EmployeeButton">Employee</Button>
+            <Button fx:id="Department_Entity_Button" styleClass="Department_Entity_Button" onAction="#Find_DepartmentButton">Department</Button>
+            <Button fx:id="Office_Entity_Button" styleClass="Office_Entity_Button" onAction="#Find_OfficeButton">Office</Button>
         </HBox>
     </VBox>
 
-    <VBox fx:id="Delete_input_Container" styleClass="Delete_input_Container" AnchorPane.bottomAnchor="350" AnchorPane.rightAnchor="50">
-        <HBox fx:id="Delete_portInput" styleClass="Delete_portInput" spacing="75">
-            <Text fx:id="Delete_inputTextPort" styleClass="Delete_inputText">Please enter the primary key:</Text>
-            <TextField fx:id="Delete_textField_Port" styleClass="Delete_textFieldInput" minWidth="300" promptText="Input your input here"></TextField>
+    <VBox fx:id="Update_input_Container" styleClass="Update_input_Container" AnchorPane.bottomAnchor="350" AnchorPane.rightAnchor="50" visible="false">
+        <HBox fx:id="Update_portInput" styleClass="Update_portInput" spacing="75">
+            <Text fx:id="Update_inputTextPort" styleClass="Update_inputText">Please enter the primary key:</Text>
+            <TextField fx:id="Update_textField_Port" styleClass="Update_textFieldInput" minWidth="300" promptText="Input your input here"></TextField>
         </HBox>
     </VBox>
 
-    <VBox fx:id="Update_FunctionButton_Container" styleClass="Update_FunctionButton_Container" AnchorPane.bottomAnchor="200" AnchorPane.rightAnchor="250">
-        <HBox fx:id="Update_Function_Container" styleClass="Update_Function_Container" spacing="5">
-            <Button fx:id="Update_Back_Button" styleClass="Update_Back_Button" onAction="#Update_BackButton">Back</Button>
-            <Button fx:id="Update_Submit_Button" styleClass="Update_Submit_Button" onAction="#Update_SubmitButton">Submit</Button>
-            <Button fx:id="Update_Reset_Button" styleClass="Update_Reset_Button" onAction="#Update_ResetButton">Reset</Button>
+    <VBox fx:id="FunctionButton_Container" styleClass="FunctionButton_Container" AnchorPane.bottomAnchor="200" AnchorPane.rightAnchor="250">
+        <HBox fx:id="Function_Container" styleClass="Function_Container" spacing="5">
+            <Button fx:id="Back_Button" styleClass="Back_Button" onAction="#Find_BackButton">Back</Button>
+            <Button fx:id="Submit_Button" styleClass="Submit_Button" onAction="#Find_SubmitButton">Submit</Button>
+            <Button fx:id="Reset_Button" styleClass="Reset_Button" onAction="#Find_ResetButton">Reset</Button>
         </HBox>
     </VBox>
 
