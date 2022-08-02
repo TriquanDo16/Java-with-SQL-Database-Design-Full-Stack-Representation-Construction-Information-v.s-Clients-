@@ -86,6 +86,9 @@ public class MyController implements Initializable {
     @FXML
     private ListView<String> listItems2;
 
+    @FXML
+    private VBox Insert_ImageDataInput_Container;
+
     private static Integer PORT;
     private static String  IP_Address;
     private static String  betChoices;
@@ -213,7 +216,7 @@ public class MyController implements Initializable {
      ***************************************************************************************/
     
     public void Insert_ImageButton(ActionEvent actionEvent) {
-        this.Insert_ImageButton(actionEvent);
+
     }
 
 

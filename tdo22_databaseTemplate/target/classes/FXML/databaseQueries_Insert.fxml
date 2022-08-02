@@ -26,7 +26,10 @@
             <Button fx:id="Insert_Office_Entity_Button" styleClass="Insert_Office_Entity_Button" onAction="#Insert_OfficeButton">Office</Button>
         </HBox>
     </VBox>
-    <VBox fx:id="Insert_ImageDataInput_Container" styleClass="Insert_ImageDataInput_Container" AnchorPane.rightAnchor="125" AnchorPane.bottomAnchor="250">
+
+    <Text fx:id="Insert_Prompt_Text" visible="false" AnchorPane.bottomAnchor="450" AnchorPane.rightAnchor="200" > Please enter the coresponding data below </Text>
+    
+    <VBox fx:id="Insert_ImageDataInput_Container" styleClass="Insert_ImageDataInput_Container" AnchorPane.rightAnchor="125" AnchorPane.bottomAnchor="250" visible="false">
         <HBox fx:id="Insert_Image_ID" styleClass="Insert_Image_ID" AnchorPane.bottomAnchor="350" AnchorPane.rightAnchor="50">
                 <Text fx:id="Insert_Text_Image_ID" styleClass="Text_Image_ID">Image ID:</Text>
                 <TextField fx:id="Insert_TextField_Image_ID" styleClass="Insert_TextField_Image_ID" minWidth="300" promptText="Input your data here"></TextField>
@@ -60,6 +63,34 @@
             <TextField fx:id="Insert_TextField_Time_Posted" styleClass="Insert_TextField_Time_Posted" minWidth="300" promptText="Input your data here"></TextField>
         </HBox>
     </VBox>
+
+    <VBox fx:id="Insert_UserDataInput_Container" styleClass="Insert_User_DataInput_Container" AnchorPane.rightAnchor="125" AnchorPane.bottomAnchor="250" visible="true">
+        <HBox fx:id="Insert_User_SSN" styleClass="Insert_User_SSN" AnchorPane.bottomAnchor="350" AnchorPane.rightAnchor="50">
+            <Text fx:id="Insert_Text_User_SSN" styleClass="Insert_Text_User_SSN">Image ID:</Text>
+            <TextField fx:id="Insert_TextField_SSN" styleClass="Insert_TextField_Image_ID" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Insert_User_PersonalContact" styleClass="Insert_User_PersonalContact" AnchorPane.bottomAnchor="400" AnchorPane.rightAnchor="50">
+            <Text fx:id="Insert_Text_PersonalContact" styleClass="Insert_Text_PersonalContact">Address:</Text>
+            <TextField fx:id="Insert_textField_PersonalContact" styleClass="Insert_textField_PersonalContact" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Insert_User_Address" styleClass="Insert_User_Address" AnchorPane.bottomAnchor="450" AnchorPane.rightAnchor="50">
+            <Text fx:id="Insert_Text_User_Address" styleClass="Insert_Text_User_Address">Description:</Text>
+            <TextField fx:id="Insert_TextField_User_Address" styleClass="Insert_TextField_User_Address" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Insert_User_Credibility" styleClass="Insert_User_Credibility" AnchorPane.bottomAnchor="500" AnchorPane.rightAnchor="50">
+            <Text fx:id="Insert_Text_User_Credibility" styleClass="Insert_Text_User_Credibility">Status: </Text>
+            <TextField fx:id="Insert_TextField_User_Credibility" styleClass="Insert_Textfield_User_Credibility" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Insert_User_DataUploaded" styleClass="Insert_User_DataUploaded" AnchorPane.bottomAnchor="550" AnchorPane.rightAnchor="50">
+            <Text fx:id="Insert_Text_User_DataUploaded" styleClass="Insert_Text_User_DataUploaded">Department :</Text>
+            <TextField fx:id="Insert_TextField_User_DataUploaded" styleClass="Insert_TextField_User_DataUploaded" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Insert_User_ImageConfirmed" styleClass="Insert_ImageConfirmed" AnchorPane.bottomAnchor="550" AnchorPane.rightAnchor="50">
+            <Text fx:id="Insert_Text_ImageConfirmed" styleClass="Insert_Text_ImageConfirmed">Time Checked :</Text>
+            <TextField fx:id="Insert_TextField_ImageConfirmed" styleClass="Insert_TextField_ImageConfirmed" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+    </VBox>
+
 
     <VBox fx:id="Insert_FunctionButton_Container" styleClass="Insert_FunctionButton_Container" AnchorPane.bottomAnchor="200" AnchorPane.rightAnchor="250">
         <HBox fx:id="Insert_Function_Container" styleClass="Insert_Function_Container" spacing="5">
