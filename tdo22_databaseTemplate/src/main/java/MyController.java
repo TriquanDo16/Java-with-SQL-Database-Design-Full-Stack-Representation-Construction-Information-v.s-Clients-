@@ -18,6 +18,9 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
+/** Import SQl Modules */
+import java.sql.*;
+
 public class MyController implements Initializable {
 
     @FXML
@@ -124,6 +127,9 @@ public class MyController implements Initializable {
     //static so each instance of controller can access to update 
     private static String textEntered = "";
 
+    /** Database Connector */
+    private static Connection connection;
+
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		// TODO Auto-generated method stub
@@ -159,13 +165,37 @@ public class MyController implements Initializable {
             MyController databaseScene = loader.getController();  //get controller created by FXMLLoader
             root2.getStylesheets().add("/styles/databaseQueries_MainInstruction.css");   //set style
 
+            /** Database Initialization */
+            try {
+                Class.forName("com.mysql.cj.jdbc.Driver");
+
+//            Connection con =  DriverManager.getConnection(
+//                    "jdbc:mysql://localhost:3306/jdbcdemo","root","Triquan1602.2001");
+
+                this.connection =  DriverManager.getConnection(
+                        "jdbc:mysql://localhost:3306/localtest","root","Triquan1602.2001");
+
+                System.out.println("Connected successfully to database");
+
+                Statement stmt = this.connection.createStatement();
+                ResultSet rs = stmt.executeQuery("select * from test");
+                while(rs.next())
+                            System.out.println(rs.getString(1)+"  "+rs.getString(2));
+
+
+
+                this.connection.close(); // End Database Connector - Exit
+            } catch(Exception sqlError) {
+                System.out.println("Failing connect to database");
+                System.out.println(sqlError);
+            }
+
             welcomeMainScene.getScene().setRoot(root2); //update scene graph
         }
 
         else {
             System.out.println("Check text empty");
         }
-
     }
 
 
@@ -256,21 +286,24 @@ public class MyController implements Initializable {
         this.Insert_UserDataInput_Container.setVisible(true);
         this.Insert_EmployeeDataInput_Container.setVisible(false);
         this.Insert_DepartmentDataInput_Container.setVisible(false);
-        this.Insert_OfficeDataInput_Container.setVisible(false);    }
+        this.Insert_OfficeDataInput_Container.setVisible(false);
+    }
 
     public void Insert_EmployeeButton(ActionEvent actionEvent) {
         this.Insert_ImageDataInput_Container.setVisible(false);
         this.Insert_UserDataInput_Container.setVisible(false);
         this.Insert_EmployeeDataInput_Container.setVisible(true);
         this.Insert_DepartmentDataInput_Container.setVisible(false);
-        this.Insert_OfficeDataInput_Container.setVisible(false);    }
+        this.Insert_OfficeDataInput_Container.setVisible(false);
+    }
 
     public void Insert_DepartmentButton(ActionEvent actionEvent) {
         this.Insert_ImageDataInput_Container.setVisible(false);
         this.Insert_UserDataInput_Container.setVisible(false);
         this.Insert_EmployeeDataInput_Container.setVisible(false);
         this.Insert_DepartmentDataInput_Container.setVisible(true);
-        this.Insert_OfficeDataInput_Container.setVisible(false);    }
+        this.Insert_OfficeDataInput_Container.setVisible(false);
+    }
 
     public void Insert_OfficeButton(ActionEvent actionEvent) {
         this.Insert_ImageDataInput_Container.setVisible(false);
