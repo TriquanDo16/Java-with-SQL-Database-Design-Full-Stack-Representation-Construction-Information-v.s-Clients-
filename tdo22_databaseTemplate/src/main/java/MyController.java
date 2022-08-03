@@ -2,6 +2,7 @@
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import javafx.application.Platform;
@@ -25,95 +26,68 @@ public class MyController implements Initializable {
 
     @FXML
     private AnchorPane welcomeMainScene;
-
     @FXML
     private AnchorPane databaseQueries_MainInstruction;
-
     @FXML
     private AnchorPane databaseQueries_InsertPage;
-
     @FXML
     private AnchorPane databaseQueries_DeletePage;
-
     @FXML
     private AnchorPane databaseQueries_FindPage;
-
     @FXML
     private AnchorPane databaseQueries_UpdatePage;
-
     @FXML
     private AnchorPane databaseQueries_ListPage;
-
     @FXML
     private AnchorPane infoScene;
 
+    @FXML
     private VBox Insert_Prompt_Text;
-
     @FXML
     private VBox Insert_ImageDataInput_Container;
-
     @FXML
     private VBox Insert_UserDataInput_Container;
-
     @FXML
     private VBox Insert_EmployeeDataInput_Container;
-
     @FXML
     private VBox Insert_DepartmentDataInput_Container;
-
     @FXML
     private VBox Insert_OfficeDataInput_Container;
-
     @FXML
     private VBox Delete_input_Container;
-
-    @FXML
-    private Text Delete_inputTextPort;
-
     @FXML
     private VBox Find_input_Container;
-
-    @FXML
-    private Text Find_inputText;
-
     @FXML
     private VBox Update_input_Container;
 
     @FXML
+    private Text Delete_inputTextPort;
+    @FXML
+    private Text Find_inputText;
+    @FXML
     private Text Update_inputTextPort;
-
 
     @FXML
     private TextField textField_IP;
-
     @FXML
     private TextField textField_Port;
-
     @FXML
     private TextField textField_Name;
 
-
     @FXML
     private Button playerBtnChoice;
-
     @FXML
     private Button drawBtnChoice;
-
     @FXML
     private Button bankerBtnChoice;
-
     @FXML
     private Button Container_BtnFunctions_BtnInsert;
-
     @FXML
     private Button Container_BtnFunctions_BtnDelete;
-
     @FXML
     private Button Container_BtnFunctions_BtnUpdate;
-
     @FXML
     private Button Container_BtnFunctions_BtnTableList;
-
     @FXML
     private Button Container_BtnFunctions_BtnTableFind;
 
@@ -129,6 +103,13 @@ public class MyController implements Initializable {
 
     /** Database Connector */
     private static Connection connection;
+
+    /** Data Structure to store main Primary key */
+    private static ArrayList<String> imageID;
+    private static ArrayList<String> userUploadSSN;
+    private static ArrayList<String> officeID;
+    private static ArrayList<String> departmentID;
+    private static ArrayList<String> employeeSSN;
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -182,7 +163,11 @@ public class MyController implements Initializable {
                 while(rs.next())
                             System.out.println(rs.getString(1)+"  "+rs.getString(2));
 
-
+                /**
+                 * Retrieving the meta data object
+                 * Loading all primary key to check duplicate
+                 * Primary key for each stable will be store in a dynamic arrayList
+                 */
 
                 this.connection.close(); // End Database Connector - Exit
             } catch(Exception sqlError) {
@@ -217,7 +202,7 @@ public class MyController implements Initializable {
         Parent rootInsert = InsertLoader.load();  // load view into parent
 
         MyController insertScene = InsertLoader.getController();  //get controller created by FXMLLoader
-        rootInsert.getStylesheets().add("/styles/databaseQueries_MainInstruction.css");   //set style
+        rootInsert.getStylesheets().add("/styles/databaseQueries_Insert.css");   //set style
 
         this.databaseQueries_MainInstruction.getScene().setRoot(rootInsert); //update scene graph
     }
