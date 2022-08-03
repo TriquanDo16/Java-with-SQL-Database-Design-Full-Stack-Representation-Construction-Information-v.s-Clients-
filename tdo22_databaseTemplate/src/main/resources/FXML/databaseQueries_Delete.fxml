@@ -25,7 +25,10 @@
             <Button fx:id="Delete_Office_Entity_Button" styleClass="Delete_Office_Entity_Button" onAction="#Delete_OfficeButton">Office</Button>
         </HBox>
     </VBox>
-    <VBox fx:id="Delete_input_Container" styleClass="Delete_input_Container" AnchorPane.bottomAnchor="350" AnchorPane.rightAnchor="50" visible = "false">
+    <Text fx:id="Delete_PromptText" AnchorPane.bottomAnchor="450" AnchorPane.rightAnchor="200" visible="false" >
+        Please enter the corresponding information  below
+    </Text>
+    <VBox fx:id="Delete_input_Container" styleClass="Delete_input_Container" AnchorPane.bottomAnchor="350" AnchorPane.rightAnchor="100" visible = "false">
         <HBox fx:id="Delete_portInput" styleClass="Delete_portInput" spacing="75" >
             <Text fx:id="Delete_inputTextPort" styleClass="Delete_inputText">Please enter the primary key:</Text>
             <TextField fx:id="Delete_textField_Port" styleClass="Delete_textFieldInput" minWidth="300" promptText="Input your input here"></TextField>

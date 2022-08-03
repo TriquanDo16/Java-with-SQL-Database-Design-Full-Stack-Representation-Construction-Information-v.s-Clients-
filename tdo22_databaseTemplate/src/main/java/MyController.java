@@ -71,6 +71,9 @@ public class MyController implements Initializable {
     private Text Delete_inputTextPort;
 
     @FXML
+    private Text Delete_PromtText;
+
+    @FXML
     private VBox Find_input_Container;
 
     @FXML
@@ -331,28 +334,28 @@ public class MyController implements Initializable {
      *****************
      ***************************************************************************************/
     public void Delete_ImageButton(ActionEvent actionEvent) {
-       //this.Delete_inputTextPort.setText("Image ID");
         this.Delete_input_Container.setVisible(true);
+        this.Delete_inputTextPort.setText("Image ID:");
     }
 
     public void Delete_UserButton(ActionEvent actionEvent) {
-        //this.Delete_inputText.setText("SSN:");
         this.Delete_input_Container.setVisible(true);
+        this.Delete_inputTextPort.setText("SSN:");
     }
 
     public void Delete_EmployeeButton(ActionEvent actionEvent){
-       //this.Delete_inputText.setText("SSN:");
         this.Delete_input_Container.setVisible(true);
+        this.Delete_inputTextPort.setText("SSN:");
     }
 
     public void Delete_DepartmentButton(ActionEvent actionEvent){
-      // this.Delete_inputText.setText("Deparment ID:");
         this.Delete_input_Container.setVisible(true);
+        this.Delete_inputTextPort.setText("Department ID:");
     }
 
     public void Delete_OfficeButton(ActionEvent actionEvent){
-       // this.Delete_inputText.setText("Office ID:");
         this.Delete_input_Container.setVisible(true);
+        this.Delete_inputTextPort.setText("Office ID:");
     }
 
     public void Delete_BackButton(ActionEvent actionEvent){
@@ -372,28 +375,29 @@ public class MyController implements Initializable {
      ***************************************************************************************/
 
     public void Find_ImageButton(ActionEvent actionEvent) {
-       // this.Find_inputTextPort.setText("Image ID");
         this.Find_input_Container.setVisible(true);
+        this.Find_inputText.setText("Image ID:");
+
     }
 
     public void Find_UserButton(ActionEvent actionEvent) {
-      //  this.Find_inputTextPort.setText("SSN");
         this.Find_input_Container.setVisible(true);
+        this.Find_inputText.setText("SSN:");
     }
 
     public void Find_EmployeeButton(ActionEvent actionEvent){
-        //this.Find_inputTextPort.setText("SSN");
         this.Find_input_Container.setVisible(true);
+        this.Find_inputText.setText("SSN:");
     }
 
     public void Find_DepartmentButton(ActionEvent actionEvent){
-       // this.Find_inputTextPort.setText("Department ID");
         this.Find_input_Container.setVisible(true);
+        this.Find_inputText.setText("Department ID:");
     }
 
     public void Find_OfficeButton(ActionEvent actionEvent){
-       // this.Find_inputTextPort.setText("Office ID");
         this.Find_input_Container.setVisible(true);
+        this.Find_inputText.setText("Office ID:");
     }
 
     public void Find_BackButton(ActionEvent actionEvent){
@@ -412,36 +416,38 @@ public class MyController implements Initializable {
      *****************
      ***************************************************************************************/
 
-    public void UpdateImageButton(ActionEvent actionEvent) {
-       // this.Update_inputText.setText("Image ID");
+    public void Update_ImageButton(ActionEvent actionEvent) {
         this.Update_input_Container.setVisible(true);
+        this.Update_inputTextPort.setText("Image ID:");
     }
 
-    public void UpdateUserButton(ActionEvent actionEvent) {
-      //  this.Update_inputText.setText("SSN");
+    public void Update_UserButton(ActionEvent actionEvent) {
         this.Update_input_Container.setVisible(true);
+        this.Update_inputTextPort.setText("SSN:");
     }
 
-    public void UpdateEmployeeButton(ActionEvent actionEvent){
-      //  this.Update_inputText.setText("SSN");
+    public void Update_EmployeeButton(ActionEvent actionEvent){
         this.Update_input_Container.setVisible(true);
+        this.Update_inputTextPort.setText("SSN:");
     }
 
-    public void UpdateDepartmentButton(ActionEvent actionEvent){
-       // this.Update_inputText.setText("Department ID");
+    public void Update_DepartmentButton(ActionEvent actionEvent){
         this.Update_input_Container.setVisible(true);
+        this.Update_inputTextPort.setText("Department ID:");
     }
 
-    public void UpdateOfficeButton(ActionEvent actionEvent){
-      //  this.Update_inputText.setText("Office ID");
+    public void Update_OfficeButton(ActionEvent actionEvent){
         this.Update_input_Container.setVisible(true);
+        this.Update_inputTextPort.setText("Office ID:");
     }
 
-    public void UpdateBackButton(ActionEvent actionEvent){
+    public void Update_BackButton(ActionEvent actionEvent){
+
     }
-    public void UpdateSubmitButton(ActionEvent actionEvent){
+    public void Update_SubmitButton(ActionEvent actionEvent){
+
     }
-    public void UpdateResetButton(ActionEvent actionEvent){
+    public void Update_ResetButton(ActionEvent actionEvent){
     }
 
 

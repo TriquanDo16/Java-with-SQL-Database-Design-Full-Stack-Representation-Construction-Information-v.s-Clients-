@@ -13,8 +13,8 @@
             fx:controller="MyController"
             prefHeight="400.0" prefWidth="600.0">
 
-    <VBox fx:id="Insert_Message_Container" styleClass="Insert_Message_Container" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="30">
-        <Text fx:id="Message_1" styleClass="Message_1>"> Which Entities would you like to add information?</Text>
+    <VBox fx:id="Insert_Message_Container" styleClass="Insert_Message_Container" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="30" style="-fx-text-fill: white">
+        <Text fx:id="Message_1" styleClass="Message_1" style="-fx-text-fill: white"> Which Entities would you like to add information?</Text>
     </VBox>
 
     <VBox fx:id="Insert_EntitiesButton_Container" styleClass="Insert_EntitiesButton_Container" AnchorPane.rightAnchor="5">

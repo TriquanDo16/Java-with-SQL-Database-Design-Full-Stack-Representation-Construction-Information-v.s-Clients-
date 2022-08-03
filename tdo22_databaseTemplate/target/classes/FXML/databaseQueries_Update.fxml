@@ -19,11 +19,11 @@
 
     <VBox fx:id="EntitiesButton_Container" styleClass="EntitiesButton_Container" AnchorPane.rightAnchor="5">
         <HBox fx:id="Entities_Container" styleClass ="Entities_Container" spacing="5">
-            <Button fx:id="Image_Entity_Button" styleClass="Image_Entity_Button" onAction="#Find_ImageButton">Image</Button>
-            <Button fx:id="User_Entity_Button" styleClass="User_Entity_Button" onAction="#Find_UserButton">User</Button>
-            <Button fx:id="Employee_Entity_Button" styleClass="Employee_Entity_Button" onAction="#Find_EmployeeButton">Employee</Button>
-            <Button fx:id="Department_Entity_Button" styleClass="Department_Entity_Button" onAction="#Find_DepartmentButton">Department</Button>
-            <Button fx:id="Office_Entity_Button" styleClass="Office_Entity_Button" onAction="#Find_OfficeButton">Office</Button>
+            <Button fx:id="Image_Entity_Button" styleClass="Image_Entity_Button" onAction="#Update_ImageButton">Image</Button>
+            <Button fx:id="User_Entity_Button" styleClass="User_Entity_Button" onAction="#Update_UserButton">User</Button>
+            <Button fx:id="Employee_Entity_Button" styleClass="Employee_Entity_Button" onAction="#Update_EmployeeButton">Employee</Button>
+            <Button fx:id="Department_Entity_Button" styleClass="Department_Entity_Button" onAction="#Update_DepartmentButton">Department</Button>
+            <Button fx:id="Office_Entity_Button" styleClass="Office_Entity_Button" onAction="#Update_OfficeButton">Office</Button>
         </HBox>
     </VBox>
 
@@ -36,9 +36,9 @@
 
     <VBox fx:id="FunctionButton_Container" styleClass="FunctionButton_Container" AnchorPane.bottomAnchor="200" AnchorPane.rightAnchor="250">
         <HBox fx:id="Function_Container" styleClass="Function_Container" spacing="5">
-            <Button fx:id="Back_Button" styleClass="Back_Button" onAction="#Find_BackButton">Back</Button>
-            <Button fx:id="Submit_Button" styleClass="Submit_Button" onAction="#Find_SubmitButton">Submit</Button>
-            <Button fx:id="Reset_Button" styleClass="Reset_Button" onAction="#Find_ResetButton">Reset</Button>
+            <Button fx:id="Back_Button" styleClass="Back_Button" onAction="#Update_BackButton">Back</Button>
+            <Button fx:id="Submit_Button" styleClass="Submit_Button" onAction="#Update_SubmitButton">Submit</Button>
+            <Button fx:id="Reset_Button" styleClass="Reset_Button" onAction="#Update_ResetButton">Reset</Button>
         </HBox>
     </VBox>
 
