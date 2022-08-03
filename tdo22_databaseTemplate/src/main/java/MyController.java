@@ -255,6 +255,7 @@ public class MyController implements Initializable {
     }
 
 
+
     /***************************************************************************************
      *****************
      *---------------- CONTROLLER FOR DATABASE QUERIES INSERT PAGE SCENE ----------------- *

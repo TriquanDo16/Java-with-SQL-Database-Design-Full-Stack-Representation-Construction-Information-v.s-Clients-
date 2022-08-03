@@ -10,27 +10,26 @@
             xmlns:fx="http://javafx.com/fxml"
             fx:id="databaseQueries_DeletePage"
             fx:controller="MyController"
-            prefHeight="400.0" prefWidth="600.0">
+            prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: midnightblue">
 
-    <VBox fx:id="Delete_Message_Container" styleClass="Delete_Message_Container" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="30">
-        <Text fx:id="Delete_Message_1" styleClass="DeleteMessage_1>"> Which Entities would you like to delete information?</Text>
-    </VBox>
+    <VBox spacing="10" AnchorPane.rightAnchor="150">
+        <VBox fx:id="Delete_Message_Container" styleClass="Delete_Message_Container" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="30" style="-fx-text-fill: white">
+            <Text fx:id="Delete_Message_1" styleClass="Delete_Message_1" style="-fx-text-fill: white"> Which Entities would you like to delete information?</Text>
+        </VBox>
 
-    <VBox fx:id="Delete_EntitiesButton_Container" styleClass="Delete_EntitiesButton_Container" AnchorPane.rightAnchor="5">
-        <HBox fx:id="Delete_Entities_Container" styleClass ="Delete_Entities_Container" spacing="5">
-            <Button fx:id="Delete_Image_Entity_Button" styleClass="Delete_Image_Entity_Button" onAction="#Delete_ImageButton">Image</Button>
-            <Button fx:id="Delete_User_Entity_Button" styleClass="Delete_User_Entity_Button" onAction="#Delete_UserButton">User</Button>
-            <Button fx:id="Delete_Employee_Entity_Button" styleClass="Delete_Employee_Entity_Button" onAction="#Delete_EmployeeButton">Employee</Button>
-            <Button fx:id="Delete_Department_Entity_Button" styleClass="Delete_Department_Entity_Button" onAction="#Delete_DepartmentButton">Department</Button>
-            <Button fx:id="Delete_Office_Entity_Button" styleClass="Delete_Office_Entity_Button" onAction="#Delete_OfficeButton">Office</Button>
-        </HBox>
+        <VBox fx:id="Delete_EntitiesButton_Container" styleClass="Delete_EntitiesButton_Container" AnchorPane.rightAnchor="5">
+            <HBox fx:id="Delete_Entities_Container" styleClass ="Delete_Entities_Container" spacing="5">
+                <Button fx:id="Delete_Image_Entity_Button" styleClass="Delete_Image_Entity_Button" onAction="#Delete_ImageButton">Image</Button>
+                <Button fx:id="Delete_User_Entity_Button" styleClass="Delete_User_Entity_Button" onAction="#Delete_UserButton">User</Button>
+                <Button fx:id="Delete_Employee_Entity_Button" styleClass="Delete_Employee_Entity_Button" onAction="#Delete_EmployeeButton">Employee</Button>
+                <Button fx:id="Delete_Department_Entity_Button" styleClass="Delete_Department_Entity_Button" onAction="#Delete_DepartmentButton">Department</Button>
+                <Button fx:id="Delete_Office_Entity_Button" styleClass="Delete_Office_Entity_Button" onAction="#Delete_OfficeButton">Office</Button>
+            </HBox>
+        </VBox>
     </VBox>
-    <Text fx:id="Delete_PromptText" AnchorPane.bottomAnchor="450" AnchorPane.rightAnchor="200" visible="false" >
-        Please enter the corresponding information  below
-    </Text>
-    <VBox fx:id="Delete_input_Container" styleClass="Delete_input_Container" AnchorPane.bottomAnchor="350" AnchorPane.rightAnchor="100" visible = "false">
-        <HBox fx:id="Delete_portInput" styleClass="Delete_portInput" spacing="75" >
-            <Text fx:id="Delete_inputTextPort" styleClass="Delete_inputText">Please enter the primary key:</Text>
+    <VBox fx:id="Delete_input_Container" styleClass="Delete_input_Container" AnchorPane.bottomAnchor="350" AnchorPane.rightAnchor="150" visible = "false">
+        <HBox fx:id="Delete_portInput" styleClass="Delete_portInput" spacing="10" >
+            <Text fx:id="Delete_inputTextPort" styleClass="Delete_inputText" style="-fx-text-fill: white">Please enter the primary key:</Text>
             <TextField fx:id="Delete_textField_Port" styleClass="Delete_textFieldInput" minWidth="300" promptText="Input your input here"></TextField>
         </HBox>
     </VBox>

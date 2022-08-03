@@ -18,7 +18,7 @@
     <HBox fx:id = "Container" styleClass="MainInstruction_Containers" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="30">
         <VBox fx:id="Container_instruction">
 
-            <Label  fx:id="Container_instruction_text" styleClass="Container_instruction_text" text="${'What would you like to do?'}">
+            <Label  fx:id="Container_instruction_text" styleClass="Container_instruction_text"  text="${'What would you like to do?'}">
 
 
 

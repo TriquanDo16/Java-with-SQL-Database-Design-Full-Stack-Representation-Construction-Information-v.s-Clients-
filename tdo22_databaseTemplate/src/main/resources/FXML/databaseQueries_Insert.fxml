@@ -29,7 +29,7 @@
         </VBox>
     </VBox>
 
-    <VBox fx:id="Insert_ImageDataInput_Container" styleClass="Insert_ImageDataInput_Container" AnchorPane.rightAnchor="125" AnchorPane.bottomAnchor="200" visible="false" spacing="10">
+    <VBox fx:id="Insert_ImageDataInput_Container" styleClass="Insert_ImageDataInput_Container" AnchorPane.rightAnchor="122" AnchorPane.bottomAnchor="125" visible="false" spacing="10">
         <HBox fx:id="Insert_Image_ID" styleClass="Insert_Image_ID" AnchorPane.bottomAnchor="350" AnchorPane.rightAnchor="50">
                 <Text fx:id="Insert_Text_Image_ID" styleClass="Text_Image_ID" style="-fx-fill: white" >Image ID:</Text>
                 <TextField fx:id="Insert_TextField_Image_ID" styleClass="Insert_TextField_Image_ID" minWidth="300" promptText="Input your data here"></TextField>
@@ -74,108 +74,108 @@
     </VBox>
 
 
-    <VBox fx:id="Insert_UserDataInput_Container" styleClass="Insert_User_DataInput_Container" AnchorPane.rightAnchor="125" AnchorPane.bottomAnchor="250" visible="false">
+    <VBox fx:id="Insert_UserDataInput_Container" styleClass="Insert_User_DataInput_Container" AnchorPane.rightAnchor="125" AnchorPane.bottomAnchor="250" visible="false" spacing="10">
         <HBox fx:id="Insert_User_SSN" styleClass="Insert_User_SSN" AnchorPane.bottomAnchor="350" AnchorPane.rightAnchor="50">
-            <Text fx:id="Insert_Text_User_SSN" styleClass="Insert_Text_User_SSN">SSN:</Text>
+            <Text fx:id="Insert_Text_User_SSN" styleClass="Insert_Text_User_SSN" style="-fx-fill: white">SSN:</Text>
             <TextField fx:id="Insert_User_TextField_SSN" styleClass="Insert_TextField_Image_ID" minWidth="300" promptText="Input your data here"></TextField>
         </HBox>
         <HBox fx:id="Insert_User_UserName" styleClass="Insert_User_UserName" AnchorPane.bottomAnchor="400" AnchorPane.rightAnchor="50">
-            <Text fx:id="Insert_Text_UserName" styleClass="Insert_Text_UserName">Username:</Text>
+            <Text fx:id="Insert_Text_UserName" styleClass="Insert_Text_UserName" style="-fx-fill: white">Username:</Text>
             <TextField fx:id="Insert_textField_UserName" styleClass="Insert_textFieldUserName" minWidth="300" promptText="Input your data here"></TextField>
         </HBox>
         <HBox fx:id="Insert_User_PersonalContact" styleClass="Insert_User_PersonalContact" AnchorPane.bottomAnchor="400" AnchorPane.rightAnchor="50">
-            <Text fx:id="Insert_Text_PersonalContact" styleClass="Insert_Text_PersonalContact">Contact:</Text>
+            <Text fx:id="Insert_Text_PersonalContact" styleClass="Insert_Text_PersonalContact" style="-fx-fill: white">Contact:</Text>
             <TextField fx:id="Insert_textField_PersonalContact" styleClass="Insert_textField_PersonalContact" minWidth="300" promptText="Input your data here"></TextField>
         </HBox>
         <HBox fx:id="Insert_User_Address" styleClass="Insert_User_Address" AnchorPane.bottomAnchor="450" AnchorPane.rightAnchor="50">
-            <Text fx:id="Insert_Text_User_Address" styleClass="Insert_Text_User_Address">Address:</Text>
+            <Text fx:id="Insert_Text_User_Address" styleClass="Insert_Text_User_Address" style="-fx-fill: white">Address:</Text>
             <TextField fx:id="Insert_TextField_User_Address" styleClass="Insert_TextField_User_Address" minWidth="300" promptText="Input your data here"></TextField>
         </HBox>
         <HBox fx:id="Insert_User_Credibility" styleClass="Insert_User_Credibility" AnchorPane.bottomAnchor="500" AnchorPane.rightAnchor="50">
-            <Text fx:id="Insert_Text_User_Credibility" styleClass="Insert_Text_User_Credibility">Credibility: </Text>
+            <Text fx:id="Insert_Text_User_Credibility" styleClass="Insert_Text_User_Credibility" style="-fx-fill: white">Credibility: </Text>
             <TextField fx:id="Insert_TextField_User_Credibility" styleClass="Insert_Textfield_User_Credibility" minWidth="300" promptText="Input your data here"></TextField>
         </HBox>
         <HBox fx:id="Insert_User_DataUploaded" styleClass="Insert_User_DataUploaded" AnchorPane.bottomAnchor="550" AnchorPane.rightAnchor="50">
-            <Text fx:id="Insert_Text_User_DataUploaded" styleClass="Insert_Text_User_DataUploaded">Date Uploaded:</Text>
+            <Text fx:id="Insert_Text_User_DataUploaded" styleClass="Insert_Text_User_DataUploaded" style="-fx-fill: white">Date Uploaded:</Text>
             <TextField fx:id="Insert_TextField_User_DataUploaded" styleClass="Insert_TextField_User_DataUploaded" minWidth="300" promptText="Input your data here"></TextField>
         </HBox>
     </VBox>
 
 
-    <VBox fx:id="Insert_EmployeeDataInput_Container" styleClass="Insert_User_DataInput_Container" AnchorPane.rightAnchor="125" AnchorPane.bottomAnchor="250" visible="false">
+    <VBox fx:id="Insert_EmployeeDataInput_Container" styleClass="Insert_User_DataInput_Container" AnchorPane.rightAnchor="125" AnchorPane.bottomAnchor="250" visible="false" spacing="10">
         <HBox fx:id="Insert_Empl_SSN" styleClass="Insert_Empl_SSN" AnchorPane.bottomAnchor="350" AnchorPane.rightAnchor="50">
-            <Text fx:id="Insert_Text_Empl_SSN" styleClass="Insert_Text_Empl_SSN">SSN:</Text>
+            <Text fx:id="Insert_Text_Empl_SSN" styleClass="Insert_Text_Empl_SSN" style="-fx-fill: white">SSN:</Text>
             <TextField fx:id="Insert_TextField_Empl_SSN" styleClass="Insert_TextField_Empl_SSN" minWidth="300" promptText="Input your data here"></TextField>
         </HBox>
         <HBox fx:id="Insert_Empl_Name" styleClass="Insert_Empl_Name" AnchorPane.bottomAnchor="400" AnchorPane.rightAnchor="50">
-            <Text fx:id="Insert_Text_Empl_Name" styleClass="Insert_Text_Empl_Name">Name:</Text>
+            <Text fx:id="Insert_Text_Empl_Name" styleClass="Insert_Text_Empl_Name" style="-fx-fill: white">Name:</Text>
             <TextField fx:id="Insert_textField_Empl_Name" styleClass="Insert_textField_Empl_Name" minWidth="300" promptText="Input your data here"></TextField>
         </HBox>
         <HBox fx:id="Insert_Empl_Address" styleClass="Insert_Empl_Address" AnchorPane.bottomAnchor="450" AnchorPane.rightAnchor="50">
-            <Text fx:id="Insert_Text_Empl_Address" styleClass="Insert_Text_Empl_Address">Address:</Text>
+            <Text fx:id="Insert_Text_Empl_Address" styleClass="Insert_Text_Empl_Address" style="-fx-fill: white">Address:</Text>
             <TextField fx:id="Insert_TextField_Empl_Address" styleClass="Insert_TextField_Empl_Address" minWidth="300" promptText="Input your data here"></TextField>
         </HBox>
         <HBox fx:id="Insert_Empl_Contact" styleClass="Insert_Empl_Contact" AnchorPane.bottomAnchor="500" AnchorPane.rightAnchor="50">
-            <Text fx:id="Insert_Text_Empl_Contact" styleClass="Insert_Text_Empl_Contact">Contact: </Text>
+            <Text fx:id="Insert_Text_Empl_Contact" styleClass="Insert_Text_Empl_Contact" style="-fx-fill: white">Contact: </Text>
             <TextField fx:id="Insert_TextField_Empl_Contact" styleClass="Insert_Textfield_Empl_Position" minWidth="300" promptText="Input your data here"></TextField>
         </HBox>
         <HBox fx:id="Insert_Empl_Position" styleClass="Insert_Empl_Contact" AnchorPane.bottomAnchor="500" AnchorPane.rightAnchor="50">
-            <Text fx:id="Insert_Text_Empl_Position" styleClass="Insert_Text_Empl_Contact">Position: </Text>
+            <Text fx:id="Insert_Text_Empl_Position" styleClass="Insert_Text_Empl_Contact" style="-fx-fill: white">Position: </Text>
             <TextField fx:id="Insert_TextField_Empl_Position" styleClass="Insert_Textfield_Empl_Position" minWidth="300" promptText="Input your data here"></TextField>
         </HBox>
         <HBox fx:id="Insert_Empl_RoomAssigned" styleClass="Insert_Empl_RoomAssigned" AnchorPane.bottomAnchor="500" AnchorPane.rightAnchor="50">
-            <Text fx:id="Insert_Text_Empl_RoomAssigned" styleClass="Insert_Text_Empl_RoomAssigned">Room Assigned: </Text>
+            <Text fx:id="Insert_Text_Empl_RoomAssigned" styleClass="Insert_Text_Empl_RoomAssigned" style="-fx-fill: white">Room Assigned: </Text>
             <TextField fx:id="Insert_TextField_Empl_RoomAssigned" styleClass="Insert_Textfield_Empl_RoomAssigned" minWidth="300" promptText="Input your data here"></TextField>
         </HBox>
     </VBox>
 
-    <VBox fx:id="Insert_DepartmentDataInput_Container" styleClass="Insert_User_DataInput_Container" AnchorPane.rightAnchor="125" AnchorPane.bottomAnchor="250" visible="false">
+    <VBox fx:id="Insert_DepartmentDataInput_Container" styleClass="Insert_User_DataInput_Container" AnchorPane.rightAnchor="125" AnchorPane.bottomAnchor="250" visible="false" spacing="10">
         <HBox fx:id="Insert_DepartmentID" styleClass="Insert_DepartmentID" AnchorPane.bottomAnchor="350" AnchorPane.rightAnchor="50">
-            <Text fx:id="Insert_Text_DepartmentID" styleClass="Insert_Text_DepartmentID">Department ID:</Text>
+            <Text fx:id="Insert_Text_DepartmentID" styleClass="Insert_Text_DepartmentID" style="-fx-fill: white">Department ID:</Text>
             <TextField fx:id="Insert_TextField_DepartmentID" styleClass="Insert_TextField_Image_ID" minWidth="300" promptText="Input your data here"></TextField>
         </HBox>
         <HBox fx:id="Insert_Contact" styleClass="Insert_DepartmentAddress" AnchorPane.bottomAnchor="400" AnchorPane.rightAnchor="50">
-            <Text fx:id="Insert_Text_Contact" styleClass="Insert_Text_DepartmentAddress">Contact:</Text>
+            <Text fx:id="Insert_Text_Contact" styleClass="Insert_Text_DepartmentAddress" style="-fx-fill: white">Contact:</Text>
             <TextField fx:id="Insert_textField_DepartmentAddress" styleClass="Insert_textField_DepartmentAddress" minWidth="300" promptText="Input your data here"></TextField>
         </HBox>
         <HBox fx:id="Insert_DepartmentAddress" styleClass="Insert_Contact" AnchorPane.bottomAnchor="400" AnchorPane.rightAnchor="50">
-            <Text fx:id="Insert_Text_Contacts" styleClass="Insert_Text_Contact">Address:</Text>
+            <Text fx:id="Insert_Text_Contacts" styleClass="Insert_Text_Contact" style="-fx-fill: white">Address:</Text>
             <TextField fx:id="Insert_textField_Contact" styleClass="Insert_textField_Contact" minWidth="300" promptText="Input your data here"></TextField>
         </HBox>
         <HBox fx:id="Insert_Department_HoursIn" styleClass="Insert_User_Department_HoursIn" AnchorPane.bottomAnchor="450" AnchorPane.rightAnchor="50" >
-            <Text fx:id="Insert_Text_Department_HoursIn" styleClass="Insert_Text_Department_HoursIno">Hours In:</Text>
+            <Text fx:id="Insert_Text_Department_HoursIn" styleClass="Insert_Text_Department_HoursIno" style="-fx-fill: white">Hours In:</Text>
             <TextField fx:id="Insert_TextField_Department_HoursIn" styleClass="Insert_TextField_Department_HoursIn" minWidth="300" promptText="Input your data here"></TextField>
         </HBox>
         <HBox fx:id="Insert_Department_HoursEnd" styleClass="Insert_User_Department_HoursEnd" AnchorPane.bottomAnchor="450" AnchorPane.rightAnchor="50" >
-            <Text fx:id="Insert_Text_Department_HoursEnd" styleClass="Insert_Text_Department_HoursEnd">Hours End:</Text>
+            <Text fx:id="Insert_Text_Department_HoursEnd" styleClass="Insert_Text_Department_HoursEnd" style="-fx-fill: white">Hours End:</Text>
             <TextField fx:id="Insert_TextField_Department_HoursEnd" styleClass="Insert_TextField_Department_HoursEnd" minWidth="300" promptText="Input your data here"></TextField>
         </HBox>
         <HBox fx:id="Insert_Department_OfficeID" styleClass="Insert_Department_OfficeHours" AnchorPane.bottomAnchor="500" AnchorPane.rightAnchor="50">
-            <Text fx:id="Insert_Text_Department_OfficeID" styleClass="Insert_Text_Department_OfficeID">Office ID: </Text>
+            <Text fx:id="Insert_Text_Department_OfficeID" styleClass="Insert_Text_Department_OfficeID" style="-fx-fill: white">Office ID: </Text>
             <TextField fx:id="Insert_TextField_Department_OfficeHours_OfficeID" styleClass="Insert_Textfield_Department_OfficeHours_OfficeID" minWidth="150" promptText="Time out"></TextField>
         </HBox>
     </VBox>
 
-    <VBox fx:id="Insert_OfficeDataInput_Container" styleClass="Insert_User_DataInput_Container" AnchorPane.rightAnchor="125" AnchorPane.bottomAnchor="250" visible="false">
+    <VBox fx:id="Insert_OfficeDataInput_Container" styleClass="Insert_User_DataInput_Container" AnchorPane.rightAnchor="125" AnchorPane.bottomAnchor="250" visible="false" spacing="10">
         <HBox fx:id="Insert_Office_OfficeID" styleClass="Insert_OfficeID" AnchorPane.bottomAnchor="350" AnchorPane.rightAnchor="50" >
-            <Text fx:id="Insert_Text_Office_OfficeID" styleClass="Insert_Text_OfficeID">Department ID:</Text>
+            <Text fx:id="Insert_Text_Office_OfficeID" styleClass="Insert_Text_OfficeID" style="-fx-fill: white">Department ID:</Text>
             <TextField fx:id="Insert_TextField_Office_OfficeID" styleClass="Insert_TextField_OfficeID" minWidth="300" promptText="Input your data here"></TextField>
         </HBox>
         <HBox fx:id="Insert_OfficeAddress" styleClass="Insert_OfficeAddresss" AnchorPane.bottomAnchor="400" AnchorPane.rightAnchor="50">
-            <Text fx:id="Insert_Text_OfficeAddress" styleClass="Insert_Text_OfficeAddress">Personal Contact:</Text>
+            <Text fx:id="Insert_Text_OfficeAddress" styleClass="Insert_Text_OfficeAddress" style="-fx-fill: white">Personal Contact:</Text>
             <TextField fx:id="Insert_textField_OfficeAddress" styleClass="Insert_textField_OfficeAddress" minWidth="300" promptText="Input your data here"></TextField>
         </HBox>
 
         <HBox fx:id="Insert_Office_HoursIn" styleClass="Insert_User_Office_HoursIn" AnchorPane.bottomAnchor="450" AnchorPane.rightAnchor="50" >
-            <Text fx:id="Insert_Text_Office_HoursIn" styleClass="Insert_Text_Office_HoursIno">Hours In:</Text>
+            <Text fx:id="Insert_Text_Office_HoursIn" styleClass="Insert_Text_Office_HoursIno" style="-fx-fill: white">Hours In:</Text>
             <TextField fx:id="Insert_TextField_Office_HoursIn" styleClass="Insert_TextField_Office_HoursEnd" minWidth="300" promptText="Input your data here"></TextField>
         </HBox>
         <HBox fx:id="Insert_Office_HoursEnd" styleClass="Insert_User_Department_HoursEnd" AnchorPane.bottomAnchor="450" AnchorPane.rightAnchor="50" >
-            <Text fx:id="Insert_Text_Office_HoursEnd" styleClass="Insert_Text_Department_HoursEnd">Hours End:</Text>
+            <Text fx:id="Insert_Text_Office_HoursEnd" styleClass="Insert_Text_Department_HoursEnd" style="-fx-fill: white">Hours End:</Text>
             <TextField fx:id="Insert_TextField_Office_HoursEnd" styleClass="Insert_TextField_Office_HoursEnd" minWidth="300" promptText="Input your data here"></TextField>
         </HBox>
         <HBox fx:id="Insert_Office_ManagerSSN" styleClass="Insert_Office_ManagerSSN" AnchorPane.bottomAnchor="500" AnchorPane.rightAnchor="50">
-            <Text fx:id="Insert_Text_Office_ManagerSSN" styleClass="Insert_Text_Department_ManagerSSN">Manager SSN: </Text>
+            <Text fx:id="Insert_Text_Office_ManagerSSN" styleClass="Insert_Text_Department_ManagerSSN" style="-fx-fill: white">Manager SSN: </Text>
             <TextField fx:id="Insert_TextField_Office_ManagerSSN" styleClass="Insert_Textfield_Office_ManagerSSN" minWidth="150" promptText="Time In"></TextField>
         </HBox>
 
@@ -183,7 +183,7 @@
 
 
 
-    <VBox fx:id="Insert_FunctionButton_Container" styleClass="Insert_FunctionButton_Container" AnchorPane.bottomAnchor="100" AnchorPane.rightAnchor="250">
+    <VBox fx:id="Insert_FunctionButton_Container" styleClass="Insert_FunctionButton_Container" AnchorPane.bottomAnchor="80" AnchorPane.rightAnchor="250">
         <HBox fx:id="Insert_Function_Container" styleClass="Insert_Function_Container" spacing="5">
             <Button fx:id="Insert_Back_Button" styleClass="Back_Button" onAction="#Insert_BackButton">Back</Button>
             <Button fx:id="Insert_Submit_Button" styleClass="Submit_Button" onAction="#Insert_SubmitButton">Submit</Button>

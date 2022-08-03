@@ -1,0 +1,16 @@
+.databaseQueries_DeletePage{
+ -fx-font-family: 'Arial';
+    -fx-background-color: midnightblue;
+}
+
+.Delete_Message_1{
+  -fx-text-fill: white;
+    -fx-background-color: midnightblue;
+    -fx-fill: white;
+    -fx-font-family: 'Arial';
+    -fx-font-size: 11pt;
+}
+
+.Delete_inputText{
+    -fx-fill: white;
+}

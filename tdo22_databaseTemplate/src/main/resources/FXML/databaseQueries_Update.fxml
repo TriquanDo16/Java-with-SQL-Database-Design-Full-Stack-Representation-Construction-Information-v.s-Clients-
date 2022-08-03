@@ -11,25 +11,26 @@
             xmlns:fx="http://javafx.com/fxml"
             fx:id="databaseQueries_UpdatePage"
             fx:controller="MyController"
-            prefHeight="400.0" prefWidth="600.0">
+            prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: midnightblue">
+    <VBox spacing="10" AnchorPane.rightAnchor="175">
+        <VBox fx:id="Update_Message_Container" styleClass="Update_Message_Container" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="30">
+            <Text fx:id="Update_Message_1" styleClass="My_Message_1" style="-fx-fill: white"> Which Entities would you like to update information?</Text>
+        </VBox>
 
-    <VBox fx:id="Update_Message_Container" styleClass="Update_Message_Container" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="30">
-        <Text fx:id="Update_Message_1" styleClass="Update_Message_1"> Which Entities would you like to update information?</Text>
+        <VBox fx:id="Update_EntitiesButton_Container" styleClass="Update_EntitiesButton_Container" AnchorPane.rightAnchor="5">
+            <HBox fx:id="Update_Entities_Container" styleClass ="Update_Entities_Container" spacing="5">
+                <Button fx:id="Update_Image_Entity_Button" styleClass="Update_Image_Entity_Button" onAction="#Update_ImageButton">Image</Button>
+                <Button fx:id="Update_User_Entity_Button" styleClass="Update_User_Entity_Button" onAction="#Update_UserButton">User</Button>
+                <Button fx:id="Update_Employee_Entity_Button" styleClass="Update_Employee_Entity_Button" onAction="#Update_EmployeeButton">Employee</Button>
+                <Button fx:id="Update_Department_Entity_Button" styleClass="Update_Department_Entity_Button" onAction="#Update_DepartmentButton">Department</Button>
+                <Button fx:id="Update_Office_Entity_Button" styleClass="Update_Office_Entity_Button" onAction="#Update_OfficeButton">Office</Button>
+            </HBox>
+        </VBox>
     </VBox>
 
-    <VBox fx:id="Update_EntitiesButton_Container" styleClass="Update_EntitiesButton_Container" AnchorPane.rightAnchor="5">
-        <HBox fx:id="Update_Entities_Container" styleClass ="Update_Entities_Container" spacing="5">
-            <Button fx:id="Update_Image_Entity_Button" styleClass="Update_Image_Entity_Button" onAction="#Update_ImageButton">Image</Button>
-            <Button fx:id="Update_User_Entity_Button" styleClass="Update_User_Entity_Button" onAction="#Update_UserButton">User</Button>
-            <Button fx:id="Update_Employee_Entity_Button" styleClass="Update_Employee_Entity_Button" onAction="#Update_EmployeeButton">Employee</Button>
-            <Button fx:id="Update_Department_Entity_Button" styleClass="Update_Department_Entity_Button" onAction="#Update_DepartmentButton">Department</Button>
-            <Button fx:id="Update_Office_Entity_Button" styleClass="Update_Office_Entity_Button" onAction="#Update_OfficeButton">Office</Button>
-        </HBox>
-    </VBox>
-
-    <VBox fx:id="Update_input_Container" styleClass="Update_input_Container" AnchorPane.bottomAnchor="350" AnchorPane.rightAnchor="50" visible="false">
-        <HBox fx:id="Update_portInput" styleClass="Update__portInput" spacing="75">
-            <Text fx:id="Update_inputTextPort" styleClass="Delete_inputText">Please enter the primary key:</Text>
+    <VBox fx:id="Update_input_Container" styleClass="Update_input_Container" AnchorPane.bottomAnchor="350" AnchorPane.rightAnchor="175" visible="false">
+        <HBox fx:id="Update_portInput" styleClass="Update__portInput" spacing="10">
+            <Text fx:id="Update_inputTextPort" styleClass="Delete_inputText" style="-fx-fill: white">Please enter the primary key:</Text>
             <TextField fx:id="Update__textField_Port" styleClass="Update_textFieldInput" minWidth="300" promptText="Input your input here"></TextField>
         </HBox>
     </VBox>
