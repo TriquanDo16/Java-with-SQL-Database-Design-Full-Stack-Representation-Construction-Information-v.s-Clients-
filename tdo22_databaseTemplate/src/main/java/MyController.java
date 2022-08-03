@@ -929,6 +929,22 @@ public class MyController implements Initializable {
      *****************
      ***************************************************************************************/
 
+    public void List_Button1(ActionEvent actionEvent){
+    }
+    public void List_Button2(ActionEvent actionEvent){
+
+    }
+    public void List_Button3(ActionEvent actionEvent){
+
+    }
+    public void List_Button4(ActionEvent actionEvent){
+
+    }
+    public void List_Button5(ActionEvent actionEvent){
+
+    }
+
+
 
     /***************************************************************************************
      *****************

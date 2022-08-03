@@ -10,6 +10,17 @@
             xmlns:fx="http://javafx.com/fxml"
             fx:id="databaseQueries_ListPage"
             fx:controller="MyController"
-            prefHeight="400.0" prefWidth="600.0">
+            prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: midnightblue">
+
+    <HBox fx:id="ButtonsList" spacing="10" AnchorPane.bottomAnchor="450" AnchorPane.rightAnchor="225">
+        <Button fx:id="List_Button1" styleClass="List_Button1" onAction="#List_Button1">Back</Button>
+        <Button fx:id="List_Button2" styleClass="List_Button2" onAction="#List_Button2">Back</Button>
+        <Button fx:id="List_Button3" styleClass="List_Button3" onAction="#List_Button3">Back</Button>
+        <Button fx:id="List_Button4" styleClass="List_Button4" onAction="#List_Button4">Back</Button>
+        <Button fx:id="List_Button5" styleClass="List_Button5" onAction="#List_Button5">Back</Button>
+
+
+
+    </HBox>
 
 </AnchorPane>
