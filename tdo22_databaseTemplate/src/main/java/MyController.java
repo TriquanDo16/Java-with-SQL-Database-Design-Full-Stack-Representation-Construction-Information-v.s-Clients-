@@ -795,12 +795,18 @@ public class MyController implements Initializable {
      *****************
      ***************************************************************************************/
 
-    public void Update_ImageButton(ActionEvent actionEvent){
+    public void Update_ImageButton(ActionEvent actionEvent) {
         this.Update_ImageDataInput_Container.setVisible(true);
         this.Update_UserDataInput_Container.setVisible(false);
         this.Update_EmployeeDataInput_Container.setVisible(false);
         this.Update_DepartmentDataInput_Container.setVisible(false);
         this.Update_OfficeDataInput_Container.setVisible(false);
+
+        this.updateImage = true;
+        this.updateUser = false;
+        this.updateEmployee = false;
+        this.updateDepartment = false;
+        this.updateOffice = false;
     }
 
     public void Update_UserButton(ActionEvent actionEvent) {
@@ -809,6 +815,12 @@ public class MyController implements Initializable {
         this.Update_EmployeeDataInput_Container.setVisible(false);
         this.Update_DepartmentDataInput_Container.setVisible(false);
         this.Update_OfficeDataInput_Container.setVisible(false);
+
+        this.updateImage = false;
+        this.updateUser = true;
+        this.updateEmployee = false;
+        this.updateDepartment = false;
+        this.updateOffice = false;
     }
 
     public void Update_EmployeeButton(ActionEvent actionEvent){
@@ -817,6 +829,14 @@ public class MyController implements Initializable {
         this.Update_EmployeeDataInput_Container.setVisible(true);
         this.Update_DepartmentDataInput_Container.setVisible(false);
         this.Update_OfficeDataInput_Container.setVisible(false);
+        this.Update_inputTextPort.setText("Image ID:");
+        this.Update_input_Container.setVisible(true);
+
+        this.updateImage = false;
+        this.updateUser = false;
+        this.updateEmployee = true;
+        this.updateDepartment = false;
+        this.updateOffice = false;
     }
 
     public void Update_DepartmentButton(ActionEvent actionEvent){
@@ -826,6 +846,11 @@ public class MyController implements Initializable {
         this.Update_DepartmentDataInput_Container.setVisible(true);
         this.Update_OfficeDataInput_Container.setVisible(false);
 
+        this.updateImage = false;
+        this.updateUser = false;
+        this.updateEmployee = false;
+        this.updateDepartment = true;
+        this.updateOffice = false;
     }
 
     public void Update_OfficeButton(ActionEvent actionEvent){
@@ -834,6 +859,14 @@ public class MyController implements Initializable {
         this.Update_EmployeeDataInput_Container.setVisible(false);
         this.Update_DepartmentDataInput_Container.setVisible(false);
         this.Update_OfficeDataInput_Container.setVisible(true);
+        this.Update_inputTextPort.setText("Office ID:");
+        this.Update_input_Container.setVisible(true);
+
+        this.updateImage = false;
+        this.updateUser = false;
+        this.updateEmployee = false;
+        this.updateDepartment = false;
+        this.updateOffice = true;
     }
 
 
