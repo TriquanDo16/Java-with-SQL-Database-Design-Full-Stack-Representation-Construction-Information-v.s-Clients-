@@ -6,9 +6,25 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.text.Text?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="MyController"
-            prefHeight="400.0" prefWidth="600.0">
+            prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: midnightblue">
+
+    <VBox AnchorPane.rightAnchor="225" spacing="15">
+        <Text fx:id="Stat_text" styleClass="Stat_text" AnchorPane.rightAnchor="200" style="-fx-fill: white">Some interesting Statistics</Text>
+        <HBox spacing="10">
+            <Button fx:id="Stat_Butt1" styleClass="Stat_Butt1" onAction="#Stat_Button1">Stat 1</Button>
+            <Button fx:id="Stat_Butt2" styleClass="Stat_Butt2" onAction="#Stat_Button2">Stat 2</Button>
+            <Button fx:id="Stat_Butt3" styleClass="Stat_Butt3" onAction="#Stat_Button3">Stat 3</Button>
+            <Button fx:id="Stat_Butt4" styleClass="Stat_Butt4" onAction="#Stat_Button4">Stat 4</Button>
+        </HBox>
+    </VBox>
+    <Text fx:id="Stat_Query" styleClass="Stat_Query" AnchorPane.bottomAnchor="425" AnchorPane.rightAnchor="150" style="-fx-fill: white" visible="false">My Query</Text>
+
+    <Button AnchorPane.rightAnchor="300" AnchorPane.bottomAnchor="50" fx:id="Stat_Back_Button" styleClass="Stat_Back_Button" onAction="#Stat_BackButton">Back</Button>
+
+    <TextField fx:id="Stat_QueryResult" AnchorPane.rightAnchor="250" AnchorPane.bottomAnchor="300"> Query Result</TextField>
 
 </AnchorPane>

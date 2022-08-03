@@ -68,6 +68,9 @@ public class MyController implements Initializable {
     private Text Update_inputTextPort;
 
     @FXML
+    private Text Stat_Query;
+
+    @FXML
     private VBox Update_ImageDataInput_Container;
 
     @FXML
@@ -926,4 +929,31 @@ public class MyController implements Initializable {
      *****************
      ***************************************************************************************/
 
+
+    /***************************************************************************************
+     *****************
+     *---------------- CONTROLLER FOR DATABASE QUERIES FIND PAGE SCENE ----------------- *
+     *****************
+     ***************************************************************************************/
+
+    public void Stat_Button1(ActionEvent actionEvent){
+        this.Stat_Query.setVisible(true);
+        this.Stat_Query.setText("Find the user_SSN who posted latest year image into database");
+    }
+    public void Stat_Button2(ActionEvent actionEvent){
+        this.Stat_Query.setVisible(true);
+        this.Stat_Query.setText("Find the user_SSN who posted oldest year image into database");
+
+    }
+    public void Stat_Button3(ActionEvent actionEvent){
+
+    } public void Stat_Button4(ActionEvent actionEvent){
+
+    }
+    public void Stat_BackButton(ActionEvent actionEvent){
+
+    }
+
 }
+
+
