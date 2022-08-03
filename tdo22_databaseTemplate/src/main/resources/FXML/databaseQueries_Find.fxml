@@ -35,11 +35,21 @@
             <TextField fx:id="Find_textField_Port" styleClass="Find_textFieldInput" minWidth="300" promptText="Input your input here"></TextField>
         </HBox>
     </VBox>
-    <VBox fx:id="Find_FunctionButton_Container" styleClass="Find_FunctionButton_Container" AnchorPane.bottomAnchor="200" AnchorPane.rightAnchor="250">
+
+    <VBox fx:id="Find_TexOutput_ContainerIntro" styleClass="Find_TexOutput_Container" AnchorPane.bottomAnchor="270" AnchorPane.leftAnchor="50">
+        <Text fx:id="Find_TexOutput_ContainerIntro_Content" styleClass="Find_TexOutput_Container_Content" style="-fx-fill: white">Result will go here below:</Text>
+    </VBox>
+
+    <VBox fx:id="Find_TexOutput_Container" styleClass="Find_TexOutput_Container" AnchorPane.bottomAnchor="180" AnchorPane.leftAnchor="50">
+        <Text fx:id="Find_TexOutput_Container_Content" styleClass="Find_TexOutput_Container_Content" style="-fx-fill: white"></Text>
+    </VBox>
+
+    <VBox fx:id="Find_FunctionButton_Container" styleClass="Find_FunctionButton_Container" AnchorPane.bottomAnchor="120" AnchorPane.rightAnchor="250">
         <HBox fx:id="Find_Function_Container" styleClass="Find_Function_Container" spacing="5">
             <Button fx:id="Find_Back_Button" styleClass="Find_Back_Button" onAction="#Find_BackButton">Back</Button>
             <Button fx:id="Find_Submit_Button" styleClass="Find_Submit_Button" onAction="#Find_SubmitButton">Submit</Button>
             <Button fx:id="Find_Reset_Button" styleClass="Find_Reset_Button" onAction="#Find_ResetButton">Reset</Button>
         </HBox>
     </VBox>
+
 </AnchorPane>

@@ -277,6 +277,18 @@ public class MyController implements Initializable {
     @FXML
     private TextField Delete_textField_Port;
 
+    ///*********************************************************************************/
+    ///*********************************************************************************/
+    ///*********************************************************************************/
+    /**
+     * FXML Loading for FIND Entities
+     */
+    @FXML
+    private TextField Find_textField_Port;
+    @FXML
+    private Text Find_TexOutput_Container_Content;
+
+
     @FXML
     private Button playerBtnChoice;
     @FXML
@@ -1008,34 +1020,174 @@ public class MyController implements Initializable {
     public void Find_ImageButton(ActionEvent actionEvent) {
         // this.Find_inputTextPort.setText("Image ID");
         this.Find_input_Container.setVisible(true);
+
+        // Find Boolean Value to check what Entity user had been chosen
+        this.findImage = true;
+        this.findUser = false;
+        this.findEmployee = false;
+        this.findDepartment = false;
+        this.findOffice = false;
     }
 
     public void Find_UserButton(ActionEvent actionEvent) {
         //  this.Find_inputTextPort.setText("SSN");
         this.Find_input_Container.setVisible(true);
+
+        // Find Boolean Value to check what Entity user had been chosen
+        this.findImage = false;
+        this.findUser = true;
+        this.findEmployee = false;
+        this.findDepartment = false;
+        this.findOffice = false;
     }
 
     public void Find_EmployeeButton(ActionEvent actionEvent){
         //this.Find_inputTextPort.setText("SSN");
         this.Find_input_Container.setVisible(true);
+
+        // Find Boolean Value to check what Entity user had been chosen
+        this.findImage = false;
+        this.findUser = false;
+        this.findEmployee = true;
+        this.findDepartment = false;
+        this.findOffice = false;
     }
 
     public void Find_DepartmentButton(ActionEvent actionEvent){
         // this.Find_inputTextPort.setText("Department ID");
         this.Find_input_Container.setVisible(true);
+
+        // Find Boolean Value to check what Entity user had been chosen
+        this.findImage = false;
+        this.findUser = false;
+        this.findEmployee = false;
+        this.findDepartment = true;
+        this.findOffice = false;
     }
 
     public void Find_OfficeButton(ActionEvent actionEvent){
         // this.Find_inputTextPort.setText("Office ID");
         this.Find_input_Container.setVisible(true);
+
+        // Find Boolean Value to check what Entity user had been chosen
+        this.findImage = false;
+        this.findUser = false;
+        this.findEmployee = false;
+        this.findDepartment = false;
+        this.findOffice = true;
     }
 
-    public void Find_SubmitButton(ActionEvent actionEvent){
+    public void Find_SubmitButton(ActionEvent actionEvent) throws SQLException {
+        String primaryKey = this.Find_textField_Port.getText();
+        System.out.println("Local testing on Find: "+ primaryKey);
+        String SQL_FIND = "";
 
+        if (this.findImage) {
+            SQL_FIND = "SELECT * FROM image WHERE image_ID=?";
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL_FIND);
+            preparedStatement.setString(1, primaryKey);
+            ResultSet rst = preparedStatement.executeQuery();
+
+            String result = "";
+
+            while(rst.next()) {
+                result += (rst.getString(1))
+                        + ("\t"+rst.getString(2))
+                        + ("\t"+rst.getString(3))
+                        + ("\t"+rst.getString(4))
+                        + ("\t"+rst.getInt(5))
+                        + ("\t"+rst.getString(6))
+                        + ("\t"+rst.getString(7))
+                        + ("\t"+rst.getInt(8))
+                        + ("\t"+rst.getString(9))
+                        + ("\t"+rst.getString(10));
+            }
+
+            Find_TexOutput_Container_Content.setText(result);
+        }
+
+        else if (this.findUser) {
+            SQL_FIND = "SELECT * FROM user_upload WHERE SSN=?";
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL_FIND);
+            preparedStatement.setString(1, primaryKey);
+            ResultSet rst = preparedStatement.executeQuery();
+
+            String result = "";
+
+            while(rst.next()) {
+                result += (rst.getString(1))
+                        + ("\t"+rst.getString(2))
+                        + ("\t"+rst.getInt(3))
+                        + ("\t"+rst.getString(4))
+                        + ("\t"+rst.getInt(5))
+                        + ("\t"+rst.getInt(6));
+            }
+
+            Find_TexOutput_Container_Content.setText(result);
+        }
+
+        else if (this.findEmployee) {
+            SQL_FIND = "SELECT * FROM employee WHERE SSN=?";
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL_FIND);
+            preparedStatement.setString(1, primaryKey);
+            ResultSet rst = preparedStatement.executeQuery();
+
+            String result = "";
+            while(rst.next()) {
+                result += (rst.getString(1))
+                        + ("\t"+rst.getString(2))
+                        + ("\t"+rst.getString(3))
+                        + ("\t"+rst.getInt(4))
+                        + ("\t"+rst.getString(5))
+                        + ("\t"+rst.getString(6));
+            }
+
+            Find_TexOutput_Container_Content.setText(result);
+        }
+
+        else if (this.findDepartment) {
+            SQL_FIND = "SELECT * FROM department WHERE department_ID=?";
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL_FIND);
+            preparedStatement.setString(1, primaryKey);
+            ResultSet rst = preparedStatement.executeQuery();
+
+            String result = "";
+            while(rst.next()) {
+                result += (rst.getString(1))
+                        + ("\t"+rst.getInt(2))
+                        + ("\t"+rst.getString(3))
+                        + ("\t"+rst.getString(4))
+                        + ("\t"+rst.getString(5))
+                        + ("\t"+rst.getString(6));
+            }
+
+            Find_TexOutput_Container_Content.setText(result);
+
+        }
+
+        else if (this.findOffice) {
+            SQL_FIND = "SELECT * FROM app_controller_office WHERE office_ID=?";
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL_FIND);
+            preparedStatement.setString(1, primaryKey);
+            ResultSet rst = preparedStatement.executeQuery();
+
+            String result = "";
+            while(rst.next()) {
+                result += (rst.getString(1))
+                        + ("\t"+rst.getString(2))
+                        + ("\t"+rst.getString(3))
+                        + ("\t"+rst.getString(4))
+                        + ("\t"+rst.getString(5));
+            }
+
+            Find_TexOutput_Container_Content.setText(result);
+
+        }
+
+        System.out.println("--> Done! Find Succefully");
     }
 
-
-
+    
     public void Find_BackButton(ActionEvent actionEvent) throws Exception {
         // Find Boolean Value to check what Entity user had been chosen
         this.findImage = false;
@@ -1043,6 +1195,8 @@ public class MyController implements Initializable {
         this.findEmployee = false;
         this.findDepartment = false;
         this.findOffice = false;
+
+        Find_TexOutput_Container_Content.setText("");
 
         /** Reset Back Page to insert another entities */
         // Loading to Delete main page
@@ -1062,6 +1216,8 @@ public class MyController implements Initializable {
         this.findEmployee = false;
         this.findDepartment = false;
         this.findOffice = false;
+
+        Find_TexOutput_Container_Content.setText("");
 
         /** Reset Clear Page to insert another entities */
         // Loading to Delete main page
@@ -1336,7 +1492,7 @@ public class MyController implements Initializable {
 
     /***************************************************************************************
      *****************
-     *---------------- CONTROLLER FOR DATABASE QUERIES FIND PAGE SCENE ----------------- *
+     *---------------- CONTROLLER FOR DATABASE QUERIES STAT PAGE SCENE ----------------- *
      *****************
      ***************************************************************************************/
 
