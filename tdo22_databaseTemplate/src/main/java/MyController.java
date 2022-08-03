@@ -797,13 +797,19 @@ public class MyController implements Initializable {
         this.Update_input_Container.setVisible(true);
     }
 
-    public void UpdateBackButton(ActionEvent actionEvent){
-    }
-    public void UpdateSubmitButton(ActionEvent actionEvent){
-    }
-    public void UpdateResetButton(ActionEvent actionEvent){
+
+    public void Update_BackButton(ActionEvent actionEvent) {
+
     }
 
+    
+    public void Update_ResetButton(ActionEvent actionEvent) {
+
+    }
+
+    public void Update_SubmitButton(ActionEvent actionEvent) {
+
+    }
 
 
     /***************************************************************************************
