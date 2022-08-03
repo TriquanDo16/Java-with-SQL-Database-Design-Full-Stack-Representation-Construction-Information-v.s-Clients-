@@ -28,14 +28,160 @@
         </VBox>
     </VBox>
 
-    <VBox fx:id="Update_input_Container" styleClass="Update_input_Container" AnchorPane.bottomAnchor="350" AnchorPane.rightAnchor="175" visible="false">
-        <HBox fx:id="Update_portInput" styleClass="Update__portInput" spacing="10">
-            <Text fx:id="Update_inputTextPort" styleClass="Delete_inputText" style="-fx-fill: white">Please enter the primary key:</Text>
-            <TextField fx:id="Update__textField_Port" styleClass="Update_textFieldInput" minWidth="300" promptText="Input your input here"></TextField>
+    <VBox fx:id="Update_ImageDataInput_Container" styleClass="Update_ImageDataInput_Container" AnchorPane.rightAnchor="122" AnchorPane.bottomAnchor="90" visible="false" spacing="10">
+        <HBox fx:id="Update_Image_ID" styleClass="Update_Image_ID" AnchorPane.bottomAnchor="350" AnchorPane.rightAnchor="50">
+            <Text fx:id="Update_Text_Image_ID" styleClass="Text_Image_ID" style="-fx-fill: white" >Image ID:</Text>
+            <TextField fx:id="Update_TextField_Image_ID" styleClass="Update_TextField_Image_ID" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Update_Address" styleClass="Update_Address" AnchorPane.bottomAnchor="400" AnchorPane.rightAnchor="50">
+            <Text fx:id="Update_Text_Address" styleClass="Update_Text_Address" style="-fx-fill: white">Address:</Text>
+            <TextField fx:id="Update_textField_Address" styleClass="Update_textField_Address" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Update_Description" styleClass="Update_Description" AnchorPane.bottomAnchor="450" AnchorPane.rightAnchor="50">
+            <Text fx:id="Update_Text_Description" styleClass="Update_Text_Description"   style="-fx-fill: white">Description:</Text>
+            <TextField fx:id="Update_TextField_Description" styleClass="Update_TextField_Description" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Update_Type" styleClass="Update_Type" AnchorPane.bottomAnchor="500" AnchorPane.rightAnchor="50">
+            <Text fx:id="Update_Text_Type" styleClass="Update_Text_Status" style="-fx-fill: white">Type: </Text>
+            <TextField fx:id="Update_TextField_Type" styleClass="Update_Textfield_Status" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Update_Status" styleClass="Update_Status" AnchorPane.bottomAnchor="500" AnchorPane.rightAnchor="50">
+            <Text fx:id="Update_Text_Status" styleClass="Update_Text_Status" style="-fx-fill: white">Status: </Text>
+            <TextField fx:id="Update_TextField_Status" styleClass="Update_Textfield_Status" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Update_Department" styleClass="Update_Department" AnchorPane.bottomAnchor="550" AnchorPane.rightAnchor="50">
+            <Text fx:id="Update_Text_Department" styleClass="Update_Text_Department" style="-fx-fill: white">Department :</Text>
+            <TextField fx:id="Update_TextField_Department" styleClass="Update_TextField_Department" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Update_Owner" styleClass="Update_Owner" AnchorPane.bottomAnchor="550" AnchorPane.rightAnchor="50">
+            <Text fx:id="Update_Text_Owner" styleClass="Update_Owner" style="-fx-fill: white">Owner:</Text>
+            <TextField fx:id="Update_TextField_Owner" styleClass="Update_TextField_Owner" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Update_Year_Posted" styleClass="Update_Year_Posted" AnchorPane.bottomAnchor="550" AnchorPane.rightAnchor="50" >
+            <Text fx:id="Update_Text_Year_Posted" styleClass="Update_Text_Yeare_Posted" style="-fx-fill: white">Year Posted:</Text>
+            <TextField fx:id="Update_TextField_Time_Posted" styleClass="Update_TextField_Time_Posted" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Update_OfficeID" styleClass="Update_OfficeID" AnchorPane.bottomAnchor="550" AnchorPane.rightAnchor="50" >
+            <Text fx:id="Update_Text_OfficeID" styleClass="Update_Text_Yeare_Posted" style="-fx-fill: white">Office ID:</Text>
+            <TextField fx:id="Update_TextField_OfficeID" styleClass="Update_TextField_Time_Posted" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Update_SSN" styleClass="Update_SSN" AnchorPane.bottomAnchor="550" AnchorPane.rightAnchor="50" >
+            <Text fx:id="Update_Text_SSN" styleClass="Update_Text_Year_Posted" style="-fx-fill: white">SSN:</Text>
+            <TextField fx:id="Update_TextField_SSN" styleClass="Update_TextField_SSN" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+
+    </VBox>
+
+
+    <VBox fx:id="Update_UserDataInput_Container" styleClass="Update_User_DataInput_Container" AnchorPane.rightAnchor="125" AnchorPane.bottomAnchor="250" visible="false" spacing="10">
+        <HBox fx:id="Update_User_SSN" styleClass="Update_User_SSN" AnchorPane.bottomAnchor="350" AnchorPane.rightAnchor="50">
+            <Text fx:id="Update_Text_User_SSN" styleClass="Update_Text_User_SSN" style="-fx-fill: white">SSN:</Text>
+            <TextField fx:id="Update_User_TextField_SSN" styleClass="Update_TextField_Image_ID" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Update_User_UserName" styleClass="Update_User_UserName" AnchorPane.bottomAnchor="400" AnchorPane.rightAnchor="50">
+            <Text fx:id="Update_Text_UserName" styleClass="Update_Text_UserName" style="-fx-fill: white">Username:</Text>
+            <TextField fx:id="Update_textField_UserName" styleClass="Update_textFieldUserName" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Update_User_PersonalContact" styleClass="Update_User_PersonalContact" AnchorPane.bottomAnchor="400" AnchorPane.rightAnchor="50">
+            <Text fx:id="Update_Text_PersonalContact" styleClass="Update_Text_PersonalContact" style="-fx-fill: white">Contact:</Text>
+            <TextField fx:id="Update_textField_PersonalContact" styleClass="Update_textField_PersonalContact" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Update_User_Address" styleClass="Update_User_Address" AnchorPane.bottomAnchor="450" AnchorPane.rightAnchor="50">
+            <Text fx:id="Update_Text_User_Address" styleClass="Update_Text_User_Address" style="-fx-fill: white">Address:</Text>
+            <TextField fx:id="Update_TextField_User_Address" styleClass="Update_TextField_User_Address" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Update_User_Credibility" styleClass="Update_User_Credibility" AnchorPane.bottomAnchor="500" AnchorPane.rightAnchor="50">
+            <Text fx:id="Update_Text_User_Credibility" styleClass="Update_Text_User_Credibility" style="-fx-fill: white">Credibility: </Text>
+            <TextField fx:id="Update_TextField_User_Credibility" styleClass="Update_Textfield_User_Credibility" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Update_User_DataUploaded" styleClass="Update_User_DataUploaded" AnchorPane.bottomAnchor="550" AnchorPane.rightAnchor="50">
+            <Text fx:id="Update_Text_User_DataUploaded" styleClass="Update_Text_User_DataUploaded" style="-fx-fill: white">Date Uploaded:</Text>
+            <TextField fx:id="Update_TextField_User_DataUploaded" styleClass="Update_TextField_User_DataUploaded" minWidth="300" promptText="Input your data here"></TextField>
         </HBox>
     </VBox>
 
-    <VBox fx:id="Update_FunctionButton_Container" styleClass="Update_FunctionButton_Container" AnchorPane.bottomAnchor="200" AnchorPane.rightAnchor="250">
+
+    <VBox fx:id="Update_EmployeeDataInput_Container" styleClass="Update_User_DataInput_Container" AnchorPane.rightAnchor="125" AnchorPane.bottomAnchor="250" visible="false" spacing="10">
+        <HBox fx:id="Update_Empl_SSN" styleClass="Update_Empl_SSN" AnchorPane.bottomAnchor="350" AnchorPane.rightAnchor="50">
+            <Text fx:id="Update_Text_Empl_SSN" styleClass="Update_Text_Empl_SSN" style="-fx-fill: white">SSN:</Text>
+            <TextField fx:id="Update_TextField_Empl_SSN" styleClass="Update_TextField_Empl_SSN" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Update_Empl_Name" styleClass="Update_Empl_Name" AnchorPane.bottomAnchor="400" AnchorPane.rightAnchor="50">
+            <Text fx:id="Update_Text_Empl_Name" styleClass="Update_Text_Empl_Name" style="-fx-fill: white">Name:</Text>
+            <TextField fx:id="Update_textField_Empl_Name" styleClass="Update_textField_Empl_Name" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Update_Empl_Address" styleClass="Update_Empl_Address" AnchorPane.bottomAnchor="450" AnchorPane.rightAnchor="50">
+            <Text fx:id="Update_Text_Empl_Address" styleClass="Update_Text_Empl_Address" style="-fx-fill: white">Address:</Text>
+            <TextField fx:id="Update_TextField_Empl_Address" styleClass="Update_TextField_Empl_Address" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Update_Empl_Contact" styleClass="Update_Empl_Contact" AnchorPane.bottomAnchor="500" AnchorPane.rightAnchor="50">
+            <Text fx:id="Update_Text_Empl_Contact" styleClass="Update_Text_Empl_Contact" style="-fx-fill: white">Contact: </Text>
+            <TextField fx:id="Update_TextField_Empl_Contact" styleClass="Update_Textfield_Empl_Position" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Update_Empl_Position" styleClass="Update_Empl_Contact" AnchorPane.bottomAnchor="500" AnchorPane.rightAnchor="50">
+            <Text fx:id="Update_Text_Empl_Position" styleClass="Update_Text_Empl_Contact" style="-fx-fill: white">Position: </Text>
+            <TextField fx:id="Update_TextField_Empl_Position" styleClass="Update_Textfield_Empl_Position" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Update_Empl_RoomAssigned" styleClass="Update_Empl_RoomAssigned" AnchorPane.bottomAnchor="500" AnchorPane.rightAnchor="50">
+            <Text fx:id="Update_Text_Empl_RoomAssigned" styleClass="Update_Text_Empl_RoomAssigned" style="-fx-fill: white">Room Assigned: </Text>
+            <TextField fx:id="Update_TextField_Empl_RoomAssigned" styleClass="Update_Textfield_Empl_RoomAssigned" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+    </VBox>
+
+    <VBox fx:id="Update_DepartmentDataInput_Container" styleClass="Update_User_DataInput_Container" AnchorPane.rightAnchor="125" AnchorPane.bottomAnchor="250" visible="false" spacing="10">
+        <HBox fx:id="Update_DepartmentID" styleClass="Update_DepartmentID" AnchorPane.bottomAnchor="350" AnchorPane.rightAnchor="50">
+            <Text fx:id="Update_Text_DepartmentID" styleClass="Update_Text_DepartmentID" style="-fx-fill: white">Department ID:</Text>
+            <TextField fx:id="Update_TextField_DepartmentID" styleClass="Update_TextField_Image_ID" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Update_Contact" styleClass="Update_DepartmentAddress" AnchorPane.bottomAnchor="400" AnchorPane.rightAnchor="50">
+            <Text fx:id="Update_Text_Contact" styleClass="Update_Text_DepartmentAddress" style="-fx-fill: white">Contact:</Text>
+            <TextField fx:id="Update_textField_DepartmentAddress" styleClass="Update_textField_DepartmentAddress" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Update_DepartmentAddress" styleClass="Update_Contact" AnchorPane.bottomAnchor="400" AnchorPane.rightAnchor="50">
+            <Text fx:id="Update_Text_Contacts" styleClass="Update_Text_Contact" style="-fx-fill: white">Address:</Text>
+            <TextField fx:id="Update_textField_Contact" styleClass="Update_textField_Contact" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Update_Department_HoursIn" styleClass="Update_User_Department_HoursIn" AnchorPane.bottomAnchor="450" AnchorPane.rightAnchor="50" >
+            <Text fx:id="Update_Text_Department_HoursIn" styleClass="Update_Text_Department_HoursIno" style="-fx-fill: white">Hours In:</Text>
+            <TextField fx:id="Update_TextField_Department_HoursIn" styleClass="Update_TextField_Department_HoursIn" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Update_Department_HoursEnd" styleClass="Update_User_Department_HoursEnd" AnchorPane.bottomAnchor="450" AnchorPane.rightAnchor="50" >
+            <Text fx:id="Update_Text_Department_HoursEnd" styleClass="Update_Text_Department_HoursEnd" style="-fx-fill: white">Hours End:</Text>
+            <TextField fx:id="Update_TextField_Department_HoursEnd" styleClass="Update_TextField_Department_HoursEnd" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Update_Department_OfficeID" styleClass="Update_Department_OfficeHours" AnchorPane.bottomAnchor="500" AnchorPane.rightAnchor="50">
+            <Text fx:id="Update_Text_Department_OfficeID" styleClass="Update_Text_Department_OfficeID" style="-fx-fill: white">Office ID: </Text>
+            <TextField fx:id="Update_TextField_Department_OfficeHours_OfficeID" styleClass="Update_Textfield_Department_OfficeHours_OfficeID" minWidth="150" promptText="Time out"></TextField>
+        </HBox>
+    </VBox>
+
+    <VBox fx:id="Update_OfficeDataInput_Container" styleClass="Update_User_DataInput_Container" AnchorPane.rightAnchor="125" AnchorPane.bottomAnchor="250" visible="false" spacing="10">
+        <HBox fx:id="Update_Office_OfficeID" styleClass="Update_OfficeID" AnchorPane.bottomAnchor="350" AnchorPane.rightAnchor="50" >
+            <Text fx:id="Update_Text_Office_OfficeID" styleClass="Update_Text_OfficeID" style="-fx-fill: white">Department ID:</Text>
+            <TextField fx:id="Update_TextField_Office_OfficeID" styleClass="Update_TextField_OfficeID" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Update_OfficeAddress" styleClass="Update_OfficeAddresss" AnchorPane.bottomAnchor="400" AnchorPane.rightAnchor="50">
+            <Text fx:id="Update_Text_OfficeAddress" styleClass="Update_Text_OfficeAddress" style="-fx-fill: white">Personal Contact:</Text>
+            <TextField fx:id="Update_textField_OfficeAddress" styleClass="Update_textField_OfficeAddress" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+
+        <HBox fx:id="Update_Office_HoursIn" styleClass="Update_User_Office_HoursIn" AnchorPane.bottomAnchor="450" AnchorPane.rightAnchor="50" >
+            <Text fx:id="Update_Text_Office_HoursIn" styleClass="Update_Text_Office_HoursIno" style="-fx-fill: white">Hours In:</Text>
+            <TextField fx:id="Update_TextField_Office_HoursIn" styleClass="Update_TextField_Office_HoursEnd" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Update_Office_HoursEnd" styleClass="Update_User_Department_HoursEnd" AnchorPane.bottomAnchor="450" AnchorPane.rightAnchor="50" >
+            <Text fx:id="Update_Text_Office_HoursEnd" styleClass="Update_Text_Department_HoursEnd" style="-fx-fill: white">Hours End:</Text>
+            <TextField fx:id="Update_TextField_Office_HoursEnd" styleClass="Update_TextField_Office_HoursEnd" minWidth="300" promptText="Input your data here"></TextField>
+        </HBox>
+        <HBox fx:id="Update_Office_ManagerSSN" styleClass="Update_Office_ManagerSSN" AnchorPane.bottomAnchor="500" AnchorPane.rightAnchor="50">
+            <Text fx:id="Update_Text_Office_ManagerSSN" styleClass="Update_Text_Department_ManagerSSN" style="-fx-fill: white">Manager SSN: </Text>
+            <TextField fx:id="Update_TextField_Office_ManagerSSN" styleClass="Update_Textfield_Office_ManagerSSN" minWidth="150" promptText="Time In"></TextField>
+        </HBox>
+
+    </VBox>
+   
+
+    <VBox fx:id="Update_FunctionButton_Container" styleClass="Update_FunctionButton_Container" AnchorPane.bottomAnchor="20" AnchorPane.rightAnchor="250">
         <HBox fx:id="Function_Container" styleClass="Update_Function_Container" spacing="5">
             <Button fx:id="Update_Back_Button" styleClass="Update_Back_Button" onAction="#Update_BackButton">Back</Button>
             <Button fx:id="Update_Submit_Button" styleClass="Update_Submit_Button" onAction="#Update_SubmitButton">Submit</Button>
