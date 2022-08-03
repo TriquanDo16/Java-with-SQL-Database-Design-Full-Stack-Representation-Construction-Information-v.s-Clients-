@@ -114,30 +114,180 @@ public class MyController implements Initializable {
     private TextField Insert_TextField_SSN;
 
     /**
-     * Text Fields for Insert User Entities
+     * Text Fields for Insert User Uploaded Entities
      */
-
+    @FXML
+    private TextField Insert_User_TextField_SSN;
+    @FXML
+    private TextField Insert_textField_UserName;
+    @FXML
+    private TextField Insert_textField_PersonalContact;
+    @FXML
+    private TextField Insert_TextField_User_Address;
+    @FXML
+    private TextField Insert_TextField_User_Credibility;
+    @FXML
+    private TextField Insert_TextField_User_DataUploaded;
 
     /**
      * Text Fields for Insert Employee Entities
      */
-
+    @FXML
+    private TextField Insert_TextField_Empl_SSN;
+    @FXML
+    private TextField Insert_textField_Empl_Name;
+    @FXML
+    private TextField Insert_TextField_Empl_Address;
+    @FXML
+    private TextField Insert_TextField_Empl_Contact;
+    @FXML
+    private TextField Insert_TextField_Empl_Position;
+    @FXML
+    private TextField Insert_TextField_Empl_RoomAssigned;
 
     /**
-     * Text Fields for Insert Department Entities
+     * Text Fields for Insert Employee Entities
      */
-
+    @FXML
+    private TextField Insert_TextField_DepartmentID;
+    @FXML
+    private TextField Insert_textField_DepartmentAddress;
+    @FXML
+    private TextField Insert_textField_Contact;
+    @FXML
+    private TextField Insert_TextField_Department_HoursIn;
+    @FXML
+    private TextField Insert_TextField_Department_HoursEnd;
+    @FXML
+    private TextField Insert_TextField_Department_OfficeHours_OfficeID;
 
     /**
-     * Text Fields for Insert Office Entities
+     * Text Fields for Insert Employee Entities
      */
+    @FXML
+    private TextField Insert_TextField_Office_OfficeID;
+    @FXML
+    private TextField Insert_textField_OfficeAddress;
+    @FXML
+    private TextField Insert_TextField_Office_HoursIn;
+    @FXML
+    private TextField Insert_TextField_Office_HoursEnd;
+    @FXML
+    private TextField Insert_TextField_Office_ManagerSSN;
 
+
+    /*********************************************************************************/
+    /*********************************************************************************/
+    /*********************************************************************************/
+
+    /**
+     * Text Fields for UPDATE Image Entities
+     */
+    @FXML
+    private TextField Update_TextField_Image_ID;
+    @FXML
+    private TextField Update_textField_Address;
+    @FXML
+    private TextField Update_TextField_Description;
+    @FXML
+    private TextField Update_TextField_Type;
+    @FXML
+    private TextField Update_TextField_Status;
+    @FXML
+    private TextField Update_TextField_Department;
+    @FXML
+    private TextField Update_TextField_Owner;
+    @FXML
+    private TextField Update_TextField_Time_Posted;
+    @FXML
+    private TextField Update_TextField_OfficeID;
+    @FXML
+    private TextField Update_TextField_SSN;
+
+    /**
+     * Text Fields for UPDATE User Upload Entities
+     */
+    @FXML
+    private TextField Update_User_TextField_SSN;
+    @FXML
+    private TextField Update_textField_UserName;
+    @FXML
+    private TextField Update_textField_PersonalContact;
+    @FXML
+    private TextField Update_TextField_User_Address;
+    @FXML
+    private TextField Update_TextField_User_Credibility;
+    @FXML
+    private TextField Update_TextField_User_DataUploaded;
+
+    /**
+     * Text Fields for UPDATE Employee Entities
+     */
+    @FXML
+    private TextField Update_TextField_Empl_SSN;
+    @FXML
+    private TextField Update_textField_Empl_Name;
+    @FXML
+    private TextField Update_TextField_Empl_Address;
+    @FXML
+    private TextField Update_TextField_Empl_Contact;
+    @FXML
+    private TextField Update_TextField_Empl_Position;
+    @FXML
+    private TextField Update_TextField_Empl_RoomAssigned;
+
+    /**
+     * Text Fields for UPDATE Department Entities
+     */
+    @FXML
+    private TextField Update_TextField_DepartmentID;
+    @FXML
+    private TextField Update_textField_DepartmentAddress;
+    @FXML
+    private TextField Update_textField_Contact;
+    @FXML
+    private TextField Update_TextField_Department_HoursIn;
+    @FXML
+    private TextField Update_TextField_Department_HoursEnd;
+    @FXML
+    private TextField Update_TextField_Department_OfficeHours_OfficeID;
+
+    /**
+     * Text Fields for UPDATE Office Entities
+     */
+    @FXML
+    private TextField Update_TextField_Office_OfficeID;
+    @FXML
+    private TextField Update_textField_OfficeAddress;
+    @FXML
+    private TextField Update_TextField_Office_HoursIn;
+    @FXML
+    private TextField Update_TextField_Office_HoursEnd;
+    @FXML
+    private TextField Update_TextField_Office_ManagerSSN;
+
+
+    ///*********************************************************************************/
+    ///*********************************************************************************/
+    ///*********************************************************************************/
 
     /**
      * Text Fields for DELETE Entities
      */
     @FXML
     private TextField Delete_textField_Port;
+
+    ///*********************************************************************************/
+    ///*********************************************************************************/
+    ///*********************************************************************************/
+    /**
+     * FXML Loading for FIND Entities
+     */
+    @FXML
+    private TextField Find_textField_Port;
+    @FXML
+    private Text Find_TexOutput_Container_Content;
+
 
     @FXML
     private Button playerBtnChoice;
@@ -581,19 +731,134 @@ public class MyController implements Initializable {
         }
 
         else if (this.insertUser) {
+            String SSN = Insert_User_TextField_SSN.getText();
+            String username = Insert_textField_UserName.getText();
+            Integer contact = Integer.valueOf(Insert_textField_PersonalContact.getText());
+            String address =  Insert_TextField_User_Address.getText();
+            Integer credit  = Integer.valueOf(Insert_TextField_User_Credibility.getText());
+            Integer dateUp  = Integer.valueOf(Insert_TextField_User_DataUploaded.getText());
 
+            if(this.userUploadSSNList.contains(SSN)) {
+                System.out.println(" --> Duplicate, please click on reset and try again!!");
+            } else {
+                System.out.println(" Before Adding process!!");
+                this.userUploadSSNList.add(SSN); // Update to avoid duplicate
+                String SQL_INSERT = "INSERT INTO user_upload (SSN, username, contact, address, credibility, date_uploaded)" +
+                        " VALUES (?,?,?,?,?,?)";
+
+                System.out.println(" In Adding process!!");
+
+                PreparedStatement preparedStatement = connection.prepareStatement(SQL_INSERT);
+
+                preparedStatement.setString(1, SSN);
+                preparedStatement.setString(2, username);
+                preparedStatement.setInt(3, contact);
+                preparedStatement.setString(4, address);
+                preparedStatement.setInt(5, credit);
+                preparedStatement.setInt(6, dateUp);
+
+                int row = preparedStatement.executeUpdate();    // Update back to SQL database
+                System.out.println(" Successfully Adding process!!");
+                // System.out.println(row); // rows affected = 1
+            }
         }
 
         else if (this.insertEmployee) {
+            String SSN = Insert_TextField_Empl_SSN.getText();
+            String name = Insert_textField_Empl_Name.getText();
+            String address = Insert_TextField_Empl_Address.getText();
+            Integer contact = Integer.valueOf(Insert_TextField_Empl_Contact.getText());
+            String position = Insert_TextField_Empl_Position.getText();
+            String roomAssigned = Insert_TextField_Empl_RoomAssigned.getText();
 
+            if(this.employeeSSNList.contains(SSN)) {
+                System.out.println(" --> Duplicate, please click on reset and try again!!");
+            } else {
+                System.out.println(" Before Adding process!!");
+                this.employeeSSNList.add(SSN); // Update to avoid duplicate
+                String SQL_INSERT = "INSERT INTO employee (SSN, name, address, contact, position, room_assigned)" +
+                        " VALUES (?,?,?,?,?,?)";
+
+                System.out.println(" In Adding process!!");
+
+                PreparedStatement preparedStatement = connection.prepareStatement(SQL_INSERT);
+
+                preparedStatement.setString(1, SSN);
+                preparedStatement.setString(2, name);
+                preparedStatement.setString(3, address);
+                preparedStatement.setInt(4, contact);
+                preparedStatement.setString(5, position);
+                preparedStatement.setString(6, roomAssigned);
+
+                int row = preparedStatement.executeUpdate();    // Update back to SQL database
+                System.out.println(" Successfully Adding process!!");
+                // System.out.println(row); // rows affected = 1
+            }
         }
 
         else if (this.insertDepartment) {
+            String departmentIDText = Insert_TextField_DepartmentID.getText();
+            String addressText = Insert_textField_DepartmentAddress.getText();
+            Integer contactText = Integer.valueOf(Insert_textField_Contact.getText());
+            String hoursInText = Insert_TextField_Department_HoursIn.getText();
+            String hoursEndText = Insert_TextField_Department_HoursEnd.getText();
+            String officeIDText = Insert_TextField_Department_OfficeHours_OfficeID.getText();
+
+            if(this.departmentIDList.contains(departmentIDText)) {
+                System.out.println(" --> Duplicate, please click on reset and try again!!");
+            } else {
+                System.out.println(" Before Adding process!!");
+                this.departmentIDList.add(departmentIDText); // Update to avoid duplicate
+                String SQL_INSERT = "INSERT INTO employee (department_ID, contact, address, office_hour_in, office_hour_end, office_ID)" +
+                                    " VALUES (?,?,?,?,?,?)";
+
+                System.out.println(" In Adding process!!");
+
+                PreparedStatement preparedStatement = connection.prepareStatement(SQL_INSERT);
+
+                preparedStatement.setString(1, departmentIDText);
+                preparedStatement.setInt(2, contactText);
+                preparedStatement.setString(3, addressText);
+                preparedStatement.setString(4, hoursInText);
+                preparedStatement.setString(5, hoursEndText);
+                preparedStatement.setString(6, officeIDText);
+
+                int row = preparedStatement.executeUpdate();    // Update back to SQL database
+                System.out.println(" Successfully Adding process!!");
+                // System.out.println(row); // rows affected = 1
+            }
 
         }
 
         else if (this.insertOffice) {
+            String officeIDText = Insert_TextField_Office_OfficeID.getText();
+            String addressText = Insert_textField_OfficeAddress.getText();
+            String hoursInText = Insert_TextField_Office_HoursIn.getText();
+            String hoursEndText = Insert_TextField_Office_HoursEnd.getText();
+            String managerSSNText = Insert_TextField_Office_ManagerSSN.getText();
 
+            if(this.officeIDList.contains(officeIDText)) {
+                System.out.println(" --> Duplicate, please click on reset and try again!!");
+            } else {
+                System.out.println(" Before Adding process!!");
+                this.officeIDList.add(officeIDText); // Update to avoid duplicate
+                String SQL_INSERT = "INSERT INTO employee (office_ID, address, office_hour_in, office_hour_end, manager_SSN)" +
+                                    " VALUES (?,?,?,?,?)";
+
+                System.out.println(" In Adding process!!");
+
+                PreparedStatement preparedStatement = connection.prepareStatement(SQL_INSERT);
+
+                preparedStatement.setString(1, officeIDText);
+                preparedStatement.setString(2, addressText);
+                preparedStatement.setString(3, hoursInText);
+                preparedStatement.setString(4, hoursEndText);
+                preparedStatement.setString(5, managerSSNText);
+
+                int row = preparedStatement.executeUpdate();    // Update back to SQL database
+                System.out.println(" Successfully Adding process!!");
+                // System.out.println(row); // rows affected = 1
+            }
         }
 
         else {
@@ -755,39 +1020,214 @@ public class MyController implements Initializable {
     public void Find_ImageButton(ActionEvent actionEvent) {
         // this.Find_inputTextPort.setText("Image ID");
         this.Find_input_Container.setVisible(true);
+
+        // Find Boolean Value to check what Entity user had been chosen
+        this.findImage = true;
+        this.findUser = false;
+        this.findEmployee = false;
+        this.findDepartment = false;
+        this.findOffice = false;
     }
 
     public void Find_UserButton(ActionEvent actionEvent) {
         //  this.Find_inputTextPort.setText("SSN");
         this.Find_input_Container.setVisible(true);
+
+        // Find Boolean Value to check what Entity user had been chosen
+        this.findImage = false;
+        this.findUser = true;
+        this.findEmployee = false;
+        this.findDepartment = false;
+        this.findOffice = false;
     }
 
     public void Find_EmployeeButton(ActionEvent actionEvent){
         //this.Find_inputTextPort.setText("SSN");
         this.Find_input_Container.setVisible(true);
+
+        // Find Boolean Value to check what Entity user had been chosen
+        this.findImage = false;
+        this.findUser = false;
+        this.findEmployee = true;
+        this.findDepartment = false;
+        this.findOffice = false;
     }
 
     public void Find_DepartmentButton(ActionEvent actionEvent){
         // this.Find_inputTextPort.setText("Department ID");
         this.Find_input_Container.setVisible(true);
+
+        // Find Boolean Value to check what Entity user had been chosen
+        this.findImage = false;
+        this.findUser = false;
+        this.findEmployee = false;
+        this.findDepartment = true;
+        this.findOffice = false;
     }
 
     public void Find_OfficeButton(ActionEvent actionEvent){
         // this.Find_inputTextPort.setText("Office ID");
         this.Find_input_Container.setVisible(true);
+
+        // Find Boolean Value to check what Entity user had been chosen
+        this.findImage = false;
+        this.findUser = false;
+        this.findEmployee = false;
+        this.findDepartment = false;
+        this.findOffice = true;
     }
 
-    public void Find_SubmitButton(ActionEvent actionEvent){
+    public void Find_SubmitButton(ActionEvent actionEvent) throws SQLException {
+        String primaryKey = this.Find_textField_Port.getText();
+        System.out.println("Local testing on Find: "+ primaryKey);
+        String SQL_FIND = "";
 
+        if (this.findImage) {
+            SQL_FIND = "SELECT * FROM image WHERE image_ID=?";
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL_FIND);
+            preparedStatement.setString(1, primaryKey);
+            ResultSet rst = preparedStatement.executeQuery();
+
+            String result = "";
+
+            while(rst.next()) {
+                result += (rst.getString(1))
+                        + ("\t"+rst.getString(2))
+                        + ("\t"+rst.getString(3))
+                        + ("\t"+rst.getString(4))
+                        + ("\t"+rst.getInt(5))
+                        + ("\t"+rst.getString(6))
+                        + ("\t"+rst.getString(7))
+                        + ("\t"+rst.getInt(8))
+                        + ("\t"+rst.getString(9))
+                        + ("\t"+rst.getString(10));
+            }
+
+            Find_TexOutput_Container_Content.setText(result);
+        }
+
+        else if (this.findUser) {
+            SQL_FIND = "SELECT * FROM user_upload WHERE SSN=?";
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL_FIND);
+            preparedStatement.setString(1, primaryKey);
+            ResultSet rst = preparedStatement.executeQuery();
+
+            String result = "";
+
+            while(rst.next()) {
+                result += (rst.getString(1))
+                        + ("\t"+rst.getString(2))
+                        + ("\t"+rst.getInt(3))
+                        + ("\t"+rst.getString(4))
+                        + ("\t"+rst.getInt(5))
+                        + ("\t"+rst.getInt(6));
+            }
+
+            Find_TexOutput_Container_Content.setText(result);
+        }
+
+        else if (this.findEmployee) {
+            SQL_FIND = "SELECT * FROM employee WHERE SSN=?";
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL_FIND);
+            preparedStatement.setString(1, primaryKey);
+            ResultSet rst = preparedStatement.executeQuery();
+
+            String result = "";
+            while(rst.next()) {
+                result += (rst.getString(1))
+                        + ("\t"+rst.getString(2))
+                        + ("\t"+rst.getString(3))
+                        + ("\t"+rst.getInt(4))
+                        + ("\t"+rst.getString(5))
+                        + ("\t"+rst.getString(6));
+            }
+
+            Find_TexOutput_Container_Content.setText(result);
+        }
+
+        else if (this.findDepartment) {
+            SQL_FIND = "SELECT * FROM department WHERE department_ID=?";
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL_FIND);
+            preparedStatement.setString(1, primaryKey);
+            ResultSet rst = preparedStatement.executeQuery();
+
+            String result = "";
+            while(rst.next()) {
+                result += (rst.getString(1))
+                        + ("\t"+rst.getInt(2))
+                        + ("\t"+rst.getString(3))
+                        + ("\t"+rst.getString(4))
+                        + ("\t"+rst.getString(5))
+                        + ("\t"+rst.getString(6));
+            }
+
+            Find_TexOutput_Container_Content.setText(result);
+
+        }
+
+        else if (this.findOffice) {
+            SQL_FIND = "SELECT * FROM app_controller_office WHERE office_ID=?";
+            PreparedStatement preparedStatement = connection.prepareStatement(SQL_FIND);
+            preparedStatement.setString(1, primaryKey);
+            ResultSet rst = preparedStatement.executeQuery();
+
+            String result = "";
+            while(rst.next()) {
+                result += (rst.getString(1))
+                        + ("\t"+rst.getString(2))
+                        + ("\t"+rst.getString(3))
+                        + ("\t"+rst.getString(4))
+                        + ("\t"+rst.getString(5));
+            }
+
+            Find_TexOutput_Container_Content.setText(result);
+
+        }
+
+        System.out.println("--> Done! Find Succefully");
     }
 
+    
+    public void Find_BackButton(ActionEvent actionEvent) throws Exception {
+        // Find Boolean Value to check what Entity user had been chosen
+        this.findImage = false;
+        this.findUser = false;
+        this.findEmployee = false;
+        this.findDepartment = false;
+        this.findOffice = false;
 
+        Find_TexOutput_Container_Content.setText("");
 
-    public void Find_BackButton(ActionEvent actionEvent){
+        /** Reset Back Page to insert another entities */
+        // Loading to Delete main page
+        FXMLLoader backPage = new FXMLLoader(getClass().getResource("/FXML/databaseQueries_MainInstruction.fxml"));
+        Parent rootBackPage = backPage.load();  // load view into parent
 
+        MyController findScene = backPage.getController();  //get controller created by FXMLLoader
+        rootBackPage.getStylesheets().add("/styles/databaseQueries_MainInstruction.css");   //set style
+
+        this.databaseQueries_FindPage.getScene().setRoot(rootBackPage); //update scene graph
     }
 
-    public void Find_ResetButton(ActionEvent actionEvent){
+    public void Find_ResetButton(ActionEvent actionEvent) throws Exception {
+        // Find Boolean Value to check what Entity user had been chosen
+        this.findImage = false;
+        this.findUser = false;
+        this.findEmployee = false;
+        this.findDepartment = false;
+        this.findOffice = false;
+
+        Find_TexOutput_Container_Content.setText("");
+
+        /** Reset Clear Page to insert another entities */
+        // Loading to Delete main page
+        FXMLLoader resetPage = new FXMLLoader(getClass().getResource("/FXML/databaseQueries_Find.fxml"));
+        Parent rootResetFindPage = resetPage.load();  // load view into parent
+
+        MyController findScene = resetPage.getController();  //get controller created by FXMLLoader
+        rootResetFindPage.getStylesheets().add("/styles/databaseQueries_Find.css");   //set style
+
+        this.databaseQueries_FindPage.getScene().setRoot(rootResetFindPage); //update scene graph
     }
 
 
@@ -913,15 +1353,135 @@ public class MyController implements Initializable {
 
     }
 
-    public void Update_SubmitButton(ActionEvent actionEvent) {
+    public void Update_SubmitButton(ActionEvent actionEvent) throws SQLException {
+
+        if (this.updateImage) {
+            String PrimaryKey = this.Update_TextField_Image_ID.getText();
+            String address = this.Update_textField_Address.getText();
+            String description = Update_TextField_Description.getText();
+            String type = Update_TextField_Type.getText();
+            Integer status = Integer.valueOf(Update_TextField_Status.getText());
+            String department = Update_TextField_Department.getText();
+            String ownerText  = Update_TextField_Owner.getText();
+            Integer timePosted = Integer.valueOf(Update_TextField_Time_Posted.getText());
+            String officeID = Update_TextField_OfficeID.getText();
+            String ownerSSN = Update_TextField_SSN.getText();
+
+            String SQL_UPDATE = "UPDATE image SET address=?, description=?, type=?, status=?, department=?, owner=?, year_posted=?, office_ID=?, SSN=? " +
+                                "WHERE image_ID=?";
+
+            PreparedStatement prep = this.connection.prepareStatement(SQL_UPDATE);
+
+            prep.setString(10, PrimaryKey); // Condition to match the primary key
+            prep.setString(1, address);
+            prep.setString(2, description);
+            prep.setString(3, type);
+            prep.setInt(4, status);
+            prep.setString(5, department);
+            prep.setString(6, ownerText);
+            prep.setInt(7, timePosted);
+            prep.setString(8, officeID);
+            prep.setString(9, ownerSSN);
+
+            int row = prep.executeUpdate();
+            System.out.println("--> Done! Update Succefully");
+        }
+
+        else if (this.updateUser) {
+            String SSN_PrimaryKey = Update_User_TextField_SSN.getText();
+            String username = Update_textField_UserName.getText();
+            Integer contact = Integer.valueOf(Update_textField_PersonalContact.getText());
+            String address =  Update_TextField_User_Address.getText();
+            Integer credit  = Integer.valueOf(Update_TextField_User_Credibility.getText());
+            Integer dateUp  = Integer.valueOf(Update_TextField_User_DataUploaded.getText());
+
+            String SQL_UPDATE = "UPDATE user_upload SET username=?, contact=?, address=?, credibility=?, date_uploaded=?" +
+                                "WHERE SSN=?";
+
+            PreparedStatement prep = this.connection.prepareStatement(SQL_UPDATE);
+
+            prep.setString(6, SSN_PrimaryKey); // Condition to match the primary key
+            prep.setString(1, username);
+            prep.setInt(2, contact);
+            prep.setString(3, address);
+            prep.setInt(4, credit);
+            prep.setInt(5, dateUp);
+
+            int row = prep.executeUpdate();
+            System.out.println("--> Done! Update Succefully");
+        }
+
+        else if (this.updateEmployee) {
+            String SSN_PrimaryKey = Update_TextField_Empl_SSN.getText();
+            String name = Update_textField_Empl_Name.getText();
+            String address = Update_TextField_Empl_Address.getText();
+            Integer contact = Integer.valueOf(Update_TextField_Empl_Contact.getText());
+            String position = Update_TextField_Empl_Position.getText();
+            String roomAssigned = Update_TextField_Empl_RoomAssigned.getText();
+
+            String SQL_UPDATE = "UPDATE employee SET name=?, address=?, contact=?, position=?, room_assigned=?" +
+                                "WHERE SSN=?";
+
+            PreparedStatement prep = this.connection.prepareStatement(SQL_UPDATE);
+
+            prep.setString(6, SSN_PrimaryKey); // Condition to match the primary key
+            prep.setString(1, name);
+            prep.setString(2, address);
+            prep.setInt(3, contact);
+            prep.setString(4, position);
+            prep.setString(5, roomAssigned);
+
+            int row = prep.executeUpdate();
+            System.out.println("--> Done! Update Succefully");
+        }
+
+        else if (this.updateDepartment) {
+            String departmentIDText_PrimaryKey = Update_TextField_DepartmentID.getText();
+            String addressText = Update_textField_DepartmentAddress.getText();
+            Integer contactText = Integer.valueOf(Update_textField_Contact.getText());
+            String hoursInText = Update_TextField_Department_HoursIn.getText();
+            String hoursEndText = Update_TextField_Department_HoursEnd.getText();
+            String officeIDText = Update_TextField_Department_OfficeHours_OfficeID.getText();
+
+            String SQL_UPDATE = "UPDATE department SET contact=?, address=?, office_hour_in=?, office_hour_end=?, office_ID=?" +
+                                "WHERE department_ID=?";
+
+            PreparedStatement prep = this.connection.prepareStatement(SQL_UPDATE);
+
+            prep.setString(6, departmentIDText_PrimaryKey); // Condition to match the primary key
+            prep.setString(1, addressText);
+            prep.setInt(2, contactText);
+            prep.setString(3, hoursInText);
+            prep.setString(4, hoursEndText);
+            prep.setString(5, officeIDText);
+
+            int row = prep.executeUpdate();
+            System.out.println("--> Done! Update Succefully");
+        }
+
+        else if (this.updateOffice) {
+            String officeIDText = Update_TextField_Office_OfficeID.getText();
+            String addressText = Update_textField_OfficeAddress.getText();
+            String hoursInText = Update_TextField_Office_HoursIn.getText();
+            String hoursEndText = Update_TextField_Office_HoursEnd.getText();
+            String managerSSNText = Update_TextField_Office_ManagerSSN.getText();
 
 
+            String SQL_UPDATE = "UPDATE app_controller_office SET address=?, office_hour_in=?, office_hour_end=?, manager_SSN=?" +
+                                "WHERE office_ID=?";
+
+            PreparedStatement prep = this.connection.prepareStatement(SQL_UPDATE);
+
+            prep.setString(5, officeIDText);
+            prep.setString(1, addressText);
+            prep.setString(2, hoursInText);
+            prep.setString(3, hoursEndText);
+            prep.setString(4, managerSSNText);
+
+            int row = prep.executeUpdate();    // Update back to SQL database
+            System.out.println(" Successfully Adding process!!");
+        }
     }
-
-
-
-
-
 
     /***************************************************************************************
      *****************
@@ -948,7 +1508,7 @@ public class MyController implements Initializable {
 
     /***************************************************************************************
      *****************
-     *---------------- CONTROLLER FOR DATABASE QUERIES FIND PAGE SCENE ----------------- *
+     *---------------- CONTROLLER FOR DATABASE QUERIES STAT PAGE SCENE ----------------- *
      *****************
      ***************************************************************************************/
 
