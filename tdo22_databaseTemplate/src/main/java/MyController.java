@@ -401,29 +401,30 @@ public class MyController implements Initializable {
      *****************
      ***************************************************************************************/
 
-    public void Update_ImageButton(ActionEvent actionEvent) {
-        this.Update_input_Container.setVisible(true);
+    public void Update_ImageButton(ActionEvent actionEvent){
         this.Update_inputTextPort.setText("Image ID:");
+        this.Update_input_Container.setVisible(true);
     }
 
     public void Update_UserButton(ActionEvent actionEvent) {
-        this.Update_input_Container.setVisible(true);
         this.Update_inputTextPort.setText("SSN:");
+        this.Update_input_Container.setVisible(true);
     }
 
     public void Update_EmployeeButton(ActionEvent actionEvent){
-        this.Update_input_Container.setVisible(true);
         this.Update_inputTextPort.setText("SSN:");
+        this.Update_input_Container.setVisible(true);
     }
 
     public void Update_DepartmentButton(ActionEvent actionEvent){
-        this.Update_input_Container.setVisible(true);
         this.Update_inputTextPort.setText("Department ID:");
+        this.Update_input_Container.setVisible(true);
+
     }
 
     public void Update_OfficeButton(ActionEvent actionEvent){
-        this.Update_input_Container.setVisible(true);
         this.Update_inputTextPort.setText("Office ID:");
+        this.Update_input_Container.setVisible(true);
     }
 
     public void Update_BackButton(ActionEvent actionEvent){

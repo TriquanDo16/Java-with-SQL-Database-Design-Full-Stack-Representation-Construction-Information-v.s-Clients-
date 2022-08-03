@@ -27,8 +27,6 @@
         </HBox>
     </VBox>
 
-    <Text fx:id="Insert_Prompt_Text" visible="false" AnchorPane.bottomAnchor="450" AnchorPane.rightAnchor="200" > Please enter the corresponding data below </Text>
-
     <VBox fx:id="Insert_ImageDataInput_Container" styleClass="Insert_ImageDataInput_Container" AnchorPane.rightAnchor="125" AnchorPane.bottomAnchor="250" visible="false">
         <HBox fx:id="Insert_Image_ID" styleClass="Insert_Image_ID" AnchorPane.bottomAnchor="350" AnchorPane.rightAnchor="50">
                 <Text fx:id="Insert_Text_Image_ID" styleClass="Text_Image_ID">Image ID:</Text>

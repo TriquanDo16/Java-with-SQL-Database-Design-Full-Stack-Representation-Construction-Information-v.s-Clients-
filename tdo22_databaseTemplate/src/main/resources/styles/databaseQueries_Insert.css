@@ -1,14 +1,17 @@
 .databaseQueries_InsertPage{
-    -fx-text-fill: white;
+    -fx-font-family: 'Ariel';
     -fx-background-color: midnight;
 }
 
 .Insert_Message_Container{
     -fx-background-color: midnightblue;
+    -fx-text-fill: white;
 }
 
 .Message_1 {
     -fx-text-fill: white;
+    -fx-background-color: midnightblue;
+    -fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);
     -fx-font-family: 'Ariel';
     -fx-font-size: 12pt;
 }
