@@ -410,6 +410,18 @@ public class MyController implements Initializable {
         this.databaseQueries_MainInstruction.getScene().setRoot(rootFindPage); //update scene graph
     }
 
+    public void BtnTableStatistic(ActionEvent actionEvent) throws Exception {
+        // Loading to Find main page
+        FXMLLoader statisticLoader = new FXMLLoader(getClass().getResource("/FXML/databaseQueries_Statistic.fxml"));
+        Parent rootStatPage = statisticLoader.load();  // load view into parent
+
+        MyController statScene = statisticLoader.getController();  //get controller created by FXMLLoader
+        rootStatPage.getStylesheets().add("/styles/databaseQueries_Statistic.css");   //set style
+
+        this.databaseQueries_MainInstruction.getScene().setRoot(rootStatPage); //update scene graph
+
+    }
+
 
 
     /***************************************************************************************
@@ -842,6 +854,10 @@ public class MyController implements Initializable {
 
 
     }
+
+
+
+
 
 
     /***************************************************************************************

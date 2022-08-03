@@ -12,6 +12,7 @@
             fx:id="databaseQueries_UpdatePage"
             fx:controller="MyController"
             prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: midnightblue">
+
     <VBox spacing="10" AnchorPane.rightAnchor="175">
         <VBox fx:id="Update_Message_Container" styleClass="Update_Message_Container" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="30">
             <Text fx:id="Update_Message_1" styleClass="My_Message_1" style="-fx-fill: white"> Which Entities would you like to update information?</Text>
@@ -35,13 +36,13 @@
         </HBox>
     </VBox>
 
-    <VBox fx:id="Update_FunctionButton_Container" styleClass="Update_FunctionButton_Container" AnchorPane.bottomAnchor="200" AnchorPane.rightAnchor="250">
-        <HBox fx:id="Function_Container" styleClass="Update_Function_Container" spacing="5">
-            <Button fx:id="Update_Back_Button" styleClass="Update_Back_Button" onAction="#Update_BackButton">Back</Button>
-            <Button fx:id="Update_Submit_Button" styleClass="Update_Submit_Button" onAction="#Update_SubmitButton">Submit</Button>
-            <Button fx:id="Update_Reset_Button" styleClass="Update_Reset_Button" onAction="#Update_ResetButton">Reset</Button>
-        </HBox>
-    </VBox>
+<!--    <VBox fx:id="Update_FunctionButton_Container" styleClass="Update_FunctionButton_Container" AnchorPane.bottomAnchor="200" AnchorPane.rightAnchor="250">-->
+<!--        <HBox fx:id="Function_Container" styleClass="Update_Function_Container" spacing="5">-->
+<!--            <Button fx:id="Update_Back_Button" styleClass="Update_Back_Button" onAction="#Update_BackButton">Back</Button>-->
+<!--            <Button fx:id="Update_Submit_Button" styleClass="Update_Submit_Button" onAction="#Update_SubmitButton">Submit</Button>-->
+<!--            <Button fx:id="Update_Reset_Button" styleClass="Update_Reset_Button" onAction="#Update_ResetButton">Reset</Button>-->
+<!--        </HBox>-->
+<!--    </VBox>-->
 
 
 </AnchorPane>
