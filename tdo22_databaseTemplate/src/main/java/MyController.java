@@ -383,7 +383,7 @@ public class MyController implements Initializable {
         Parent rootUpdate = UpdateLoader.load();  // load view into parent
 
         MyController updateScene = UpdateLoader.getController();  //get controller created by FXMLLoader
-        rootUpdate.getStylesheets().add("/styles/databaseQueries_Update.fxml.css");   //set style
+        rootUpdate.getStylesheets().add("/styles/databaseQueries_Update.css");   //set style
 
         this.databaseQueries_MainInstruction.getScene().setRoot(rootUpdate); //update scene graph
     }
@@ -798,16 +798,48 @@ public class MyController implements Initializable {
     }
 
 
-    public void Update_BackButton(ActionEvent actionEvent) {
+    public void Update_BackButton(ActionEvent actionEvent) throws Exception {
+        // Update Boolean Value to check what Entity user had been chosen
+        this.updateImage = false;
+        this.updateUser = false;
+        this.updateEmployee = false;
+        this.updateDepartment = false;
+        this.updateOffice = false;
 
+        /** Back Page to insert another entities */
+        // Loading to Delete main page
+        FXMLLoader resetPage = new FXMLLoader(getClass().getResource("/FXML/databaseQueries_MainInstruction.fxml"));
+        Parent rootResetPage = resetPage.load();  // load view into parent
+
+        MyController updateScene = resetPage.getController();  //get controller created by FXMLLoader
+        rootResetPage.getStylesheets().add("/styles/databaseQueries_MainInstruction.css");   //set style
+
+        this.databaseQueries_UpdatePage.getScene().setRoot(rootResetPage); //update scene graph
     }
 
-    
-    public void Update_ResetButton(ActionEvent actionEvent) {
+
+    public void Update_ResetButton(ActionEvent actionEvent) throws Exception {
+        // Update Boolean Value to check what Entity user had been chosen
+        this.updateImage = false;
+        this.updateUser = false;
+        this.updateEmployee = false;
+        this.updateDepartment = false;
+        this.updateOffice = false;
+
+        /** Reset Clear Page to insert another entities */
+        // Loading to Delete main page
+        FXMLLoader resetPage = new FXMLLoader(getClass().getResource("/FXML/databaseQueries_Update.fxml"));
+        Parent rootResetPage = resetPage.load();  // load view into parent
+
+        MyController updateScene = resetPage.getController();  //get controller created by FXMLLoader
+        rootResetPage.getStylesheets().add("/styles/databaseQueries_Update.css");   //set style
+
+        this.databaseQueries_UpdatePage.getScene().setRoot(rootResetPage); //update scene graph
 
     }
 
     public void Update_SubmitButton(ActionEvent actionEvent) {
+
 
     }
 
