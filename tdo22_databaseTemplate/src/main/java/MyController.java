@@ -3,6 +3,7 @@
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import javafx.application.Platform;
@@ -11,9 +12,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
@@ -23,6 +23,15 @@ import javafx.scene.text.Text;
 import java.sql.*;
 
 public class MyController implements Initializable {
+    @FXML
+    public TableView<String> listAll_tableViewImage;
+    @FXML
+    public List<String> listUser;
+
+    @FXML
+    private TextArea listAll_ResultField_TextAreaResult;
+    @FXML
+    private TextArea Stat_QueryResult;
 
     @FXML
     private AnchorPane welcomeMainScene;
@@ -40,6 +49,8 @@ public class MyController implements Initializable {
     private AnchorPane databaseQueries_ListPage;
     @FXML
     private AnchorPane infoScene;
+    @FXML
+    private AnchorPane databaseQueries_StatisticPage;
 
     @FXML
     private VBox Insert_Prompt_Text;
@@ -1181,13 +1192,12 @@ public class MyController implements Initializable {
             }
 
             Find_TexOutput_Container_Content.setText(result);
-
         }
 
         System.out.println("--> Done! Find Succefully");
     }
 
-    
+
     public void Find_BackButton(ActionEvent actionEvent) throws Exception {
         // Find Boolean Value to check what Entity user had been chosen
         this.findImage = false;
@@ -1272,8 +1282,8 @@ public class MyController implements Initializable {
         this.Update_EmployeeDataInput_Container.setVisible(true);
         this.Update_DepartmentDataInput_Container.setVisible(false);
         this.Update_OfficeDataInput_Container.setVisible(false);
-        this.Update_inputTextPort.setText("Image ID:");
-        this.Update_input_Container.setVisible(true);
+//        this.Update_inputTextPort.setText("Image ID:");
+//        this.Update_input_Container.setVisible(true);
 
         this.updateImage = false;
         this.updateUser = false;
@@ -1302,8 +1312,8 @@ public class MyController implements Initializable {
         this.Update_EmployeeDataInput_Container.setVisible(false);
         this.Update_DepartmentDataInput_Container.setVisible(false);
         this.Update_OfficeDataInput_Container.setVisible(true);
-        this.Update_inputTextPort.setText("Office ID:");
-        this.Update_input_Container.setVisible(true);
+//        this.Update_inputTextPort.setText("Office ID:");
+//        this.Update_input_Container.setVisible(true);
 
         this.updateImage = false;
         this.updateUser = false;
@@ -1489,20 +1499,151 @@ public class MyController implements Initializable {
      *****************
      ***************************************************************************************/
 
-    public void List_Button1(ActionEvent actionEvent){
-    }
-    public void List_Button2(ActionEvent actionEvent){
 
-    }
-    public void List_Button3(ActionEvent actionEvent){
+    public void ListAll_ButtonImageBtn(ActionEvent actionEvent) throws SQLException {
+        System.out.println("Clicked on ListAll Images");
+        String SQL_QUERY = "SELECT * FROM image";
+        PreparedStatement preparedStatement = connection.prepareStatement(SQL_QUERY);
+        ResultSet rst = preparedStatement.executeQuery();
 
-    }
-    public void List_Button4(ActionEvent actionEvent){
+        String result = "";
+        listAll_ResultField_TextAreaResult.clear();
+        listAll_ResultField_TextAreaResult.appendText("\n\n");
 
-    }
-    public void List_Button5(ActionEvent actionEvent){
+        while(rst.next()) {
+            result += (rst.getString(1))
+                    + (";\t"+rst.getString(2))
+                    + (";\t"+rst.getString(3))
+                    + (";\t"+rst.getString(4))
+                    + (";\t"+rst.getInt(5))
+                    + (";\t"+rst.getString(6))
+                    + (";\t"+rst.getString(7))
+                    + (";\t"+rst.getInt(8))
+                    + (";\t"+rst.getString(9))
+                    + (";\t"+rst.getString(10));
 
+            listAll_ResultField_TextAreaResult.appendText(result + "\n");
+            result = "";
+        }
+
+
+
+//
+//        listAll_tableViewImage.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+//        listAll_tableViewImage.getColumns().get(0).prefWidthProperty().bind(listAll_tableViewImage.widthProperty().multiply(0.33));    // 33% for id column size
+//        listAll_tableViewImage.getColumns().get(1).prefWidthProperty().bind(listAll_tableViewImage.widthProperty().multiply(0.33));   // 33% for dt column size
+//        listAll_tableViewImage.getColumns().get(2).prefWidthProperty().bind(listAll_tableViewImage.widthProperty().multiply(0.33));    // 33% for cv column size
+//        listAll_tableViewImage.getItems().setAll(this.listUser);
+
+//        TableView tableView = new TableView();
+//        TableColumn<Person, String> column1 = new TableColumn<>("First Name");
+//        column1.setCellValueFactory(new PropertyValueFactory<>("firstName"));
+//
+//        TableColumn<Person, String> column2 = new TableColumn<>("Last Name");
+//        column2.setCellValueFactory(new PropertyValueFactory<>("lastName"));
+//
+//        tableView.getColumns().add(column1);
+//        tableView.getColumns().add(column2);
+//
+//        tableView.getItems().add(new Person("John", "Doe"));
+//        tableView.getItems().add(new Person("Jane", "Deer"));
+//
+//        VBox vboxTest = new VBox(tableView);
+//        this.databaseQueries_ListPage.setTopAnchor(vboxTest, 50.0);
+
+//        Find_TexOutput_Container_Content.setText(result);
     }
+
+    public void ListAll_ButtonUserBtn(ActionEvent actionEvent) throws SQLException {
+        String SQL_QUERY = "SELECT * FROM user_upload";
+        PreparedStatement preparedStatement = connection.prepareStatement(SQL_QUERY);
+        ResultSet rst = preparedStatement.executeQuery();
+
+        String result = "";
+        listAll_ResultField_TextAreaResult.clear();
+        listAll_ResultField_TextAreaResult.appendText("\n\n");
+
+        while(rst.next()) {
+            result += (rst.getString(1))
+                    + (";\t"+rst.getString(2))
+                    + (";\t"+rst.getInt(3))
+                    + (";\t"+rst.getString(4))
+                    + (";\t"+rst.getInt(5))
+                    + (";\t"+rst.getInt(6));
+
+            listAll_ResultField_TextAreaResult.appendText(result + "\n");
+            result = "";
+        }
+    }
+
+    public void ListAll_ButtonEmployeeBtn(ActionEvent actionEvent) throws SQLException {
+        String SQL_QUERY = "SELECT * FROM employee";
+        PreparedStatement preparedStatement = connection.prepareStatement(SQL_QUERY);
+        ResultSet rst = preparedStatement.executeQuery();
+
+        String result = "";
+        listAll_ResultField_TextAreaResult.clear();
+        listAll_ResultField_TextAreaResult.appendText("\n\n");
+
+        while(rst.next()) {
+            result += (rst.getString(1))
+                    + (";\t"+rst.getString(2))
+                    + (";\t"+rst.getString(3))
+                    + (";\t"+rst.getInt(4))
+                    + (";\t"+rst.getString(5))
+                    + (";\t"+rst.getString(6));
+
+            listAll_ResultField_TextAreaResult.appendText(result + "\n");
+            result = "";
+        }
+    }
+
+    public void ListAll_ButtonDepartmentBtn(ActionEvent actionEvent) throws SQLException {
+        String SQL_QUERY = "SELECT * FROM department";
+        PreparedStatement preparedStatement = connection.prepareStatement(SQL_QUERY);
+        ResultSet rst = preparedStatement.executeQuery();
+
+        String result = "";
+        listAll_ResultField_TextAreaResult.clear();
+        listAll_ResultField_TextAreaResult.appendText("\n\n");
+
+        while(rst.next()) {
+            result += (rst.getString(1))
+                    + (";\t"+rst.getInt(2))
+                    + (";\t"+rst.getString(3))
+                    + (";\t"+rst.getString(4))
+                    + (";\t"+rst.getString(5))
+                    + (";\t"+rst.getString(6));
+
+            listAll_ResultField_TextAreaResult.appendText(result + "\n");
+            result = "";
+        }
+    }
+
+    public void ListAll_ButtonOfficeBtn(ActionEvent actionEvent) throws SQLException {
+        String SQL_QUERY = "SELECT * FROM app_controller_office";
+        PreparedStatement preparedStatement = connection.prepareStatement(SQL_QUERY);
+        ResultSet rst = preparedStatement.executeQuery();
+
+        String result = "";
+        listAll_ResultField_TextAreaResult.clear();
+        listAll_ResultField_TextAreaResult.appendText("\n\n");
+
+        while(rst.next()) {
+            result += (rst.getString(1))
+                    + (";\t"+rst.getString(2))
+                    + (";\t"+rst.getString(3))
+                    + (";\t"+rst.getString(4))
+                    + (";\t"+rst.getString(5));
+
+            listAll_ResultField_TextAreaResult.appendText(result + "\n");
+            result = "";
+        }
+    }
+
+
+
+
 
 
 
@@ -1512,24 +1653,144 @@ public class MyController implements Initializable {
      *****************
      ***************************************************************************************/
 
-    public void Stat_Button1(ActionEvent actionEvent){
+    public void Stat_Button1(ActionEvent actionEvent) throws SQLException {
         this.Stat_Query.setVisible(true);
         this.Stat_Query.setText("Find the user_SSN who posted latest year image into database");
+
+        String SQL_QUERY =
+                "SELECT user_upload.SSN, user_upload.username \n" +
+                "FROM user_upload JOIN\n" +
+                "(\n" +
+                "\tSELECT user_upload.SSN, max(image.year_posted) AS latest_year\n" +
+                "\tfrom user_upload JOIN image ON user_upload.SSN = image.SSN \n" +
+                ") T\n" +
+                "WHERE T.SSN = user_upload.SSN";
+        PreparedStatement preparedStatement = connection.prepareStatement(SQL_QUERY);
+        ResultSet rst = preparedStatement.executeQuery();
+
+        Stat_QueryResult.clear();
+        Stat_QueryResult.appendText("\n\n");
+        String result = "";
+
+        while(rst.next()) {
+            result += (rst.getString(1))
+                    + (";\t" + rst.getString(2));
+
+            Stat_QueryResult.appendText(result + "\n");
+            result = "";
+        }
     }
-    public void Stat_Button2(ActionEvent actionEvent){
+
+    public void Stat_Button2(ActionEvent actionEvent) throws SQLException {
         this.Stat_Query.setVisible(true);
         this.Stat_Query.setText("Find the user_SSN who posted oldest year image into database");
 
+        String SQL_QUERY =
+                "SELECT user_upload.SSN, user_upload.username \n" +
+                "FROM user_upload JOIN\n" +
+                "(\n" +
+                "\tSELECT user_upload.SSN, min(image.year_posted) AS latest_year\n" +
+                "\tfrom user_upload JOIN image ON user_upload.SSN = image.SSN \n" +
+                ") T\n" +
+                "WHERE T.SSN = user_upload.SSN";
+        PreparedStatement preparedStatement = connection.prepareStatement(SQL_QUERY);
+        ResultSet rst = preparedStatement.executeQuery();
+
+        Stat_QueryResult.clear();
+        Stat_QueryResult.appendText("\n\n");
+        String result = "";
+
+        while(rst.next()) {
+            result += (rst.getString(1))
+                    + (";\t" + rst.getString(2));
+
+            Stat_QueryResult.appendText(result + "\n");
+            result = "";
+        }
     }
-    public void Stat_Button3(ActionEvent actionEvent){
 
-    } public void Stat_Button4(ActionEvent actionEvent){
+    public void Stat_Button3(ActionEvent actionEvent) throws SQLException {
+        this.Stat_Query.setVisible(true);
+        this.Stat_Query.setText("Funny Fact: Find the employee who has the longest job title");
 
+        String SQL_QUERY =
+                "SELECT name, position \n" +
+                "FROM employee \n" +
+                "WHERE length(employee.position) = (\n" +
+                    "\tSELECT max(length(position)) FROM employee\n" +
+                ")\t";
+
+        PreparedStatement preparedStatement = connection.prepareStatement(SQL_QUERY);
+        ResultSet rst = preparedStatement.executeQuery();
+
+        Stat_QueryResult.clear();
+        Stat_QueryResult.appendText("\n\n");
+        String result = "";
+
+        while(rst.next()) {
+            result += ("Employname: " + rst.getString(1))
+                    + (";\tSSN: " + rst.getString(2));
+
+            Stat_QueryResult.appendText(result + "\n");
+            result = "";
+        }
     }
-    public void Stat_BackButton(ActionEvent actionEvent){
 
+    public void Stat_Button4(ActionEvent actionEvent) throws SQLException {
+        this.Stat_Query.setVisible(true);
+        this.Stat_Query.setText("Retrieves all images that uploaded by the person (people) got highest credit score");
+
+        /* Query on Workbench
+            SELECT image_ID, address, description FROM (
+                SELECT user_upload.username, user_upload.SSN
+                FROM user_upload
+                WHERE user_upload.credibility = (
+                    SELECT max(credibility)
+                    AS Most_Credibility
+                    FROM user_upload
+                )
+            ) T JOIN image WHERE image.SSN = T.SSN
+         */
+
+        String SQL_QUERY =
+                "SELECT image_ID, address, description FROM (\n" +
+                "\tSELECT user_upload.username, user_upload.SSN\n" +
+                "\tFROM user_upload \n" +
+                "\tWHERE user_upload.credibility = (\n" +
+                    "\t\tSELECT max(credibility) \n" +
+                    "\t\tAS Most_Credibility\n" +
+                "\t\tFROM user_upload\n" +
+                "\t)\n" +
+                ") T JOIN image WHERE image.SSN = T.SSN";
+
+        PreparedStatement preparedStatement = connection.prepareStatement(SQL_QUERY);
+        ResultSet rst = preparedStatement.executeQuery();
+
+        Stat_QueryResult.clear();
+        Stat_QueryResult.appendText("\n\n");
+        String result = "";
+
+        while(rst.next()) {
+            result += ("Image ID: " + rst.getString(1))
+                    + (";\t\tTaken at: " + rst.getString(2))
+                    + (";\t\tDescription: " + rst.getString(3));
+
+            Stat_QueryResult.appendText(result + "\n");
+            result = "";
+        }
     }
 
+    public void Stat_BackButton(ActionEvent actionEvent) throws Exception {
+        /** Back Page to insert another entities */
+        // Loading to Delete main page
+        FXMLLoader resetPage = new FXMLLoader(getClass().getResource("/FXML/databaseQueries_MainInstruction.fxml"));
+        Parent rootResetPage = resetPage.load();  // load view into parent
+
+        MyController updateScene = resetPage.getController();  //get controller created by FXMLLoader
+        rootResetPage.getStylesheets().add("/styles/databaseQueries_MainInstruction.css");   //set style
+
+        this.databaseQueries_StatisticPage.getScene().setRoot(rootResetPage); //update scene graph
+    }
 }
 
 

@@ -6,21 +6,32 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.text.Text?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:id="databaseQueries_ListPage"
             fx:controller="MyController"
             prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: midnightblue">
 
-    <HBox fx:id="ButtonsList" spacing="10" AnchorPane.bottomAnchor="450" AnchorPane.rightAnchor="225">
-        <Button fx:id="List_Button1" styleClass="List_Button1" onAction="#List_Button1">Back</Button>
-        <Button fx:id="List_Button2" styleClass="List_Button2" onAction="#List_Button2">Back</Button>
-        <Button fx:id="List_Button3" styleClass="List_Button3" onAction="#List_Button3">Back</Button>
-        <Button fx:id="List_Button4" styleClass="List_Button4" onAction="#List_Button4">Back</Button>
-        <Button fx:id="List_Button5" styleClass="List_Button5" onAction="#List_Button5">Back</Button>
+    <VBox fx:id="ButtonsList_Container" spacing="10" AnchorPane.bottomAnchor="450" AnchorPane.rightAnchor="225">
+        <HBox fx:id="ButtonsList_Container_HBox" spacing="10">
+            <Button fx:id="ListAll_ButtonImage" styleClass="List_Button1" onAction="#ListAll_ButtonImageBtn">Image</Button>
+            <Button fx:id="ListAll_ButtonUser" styleClass="List_Button2" onAction="#ListAll_ButtonUserBtn">User</Button>
+            <Button fx:id="ListAll_ButtonEmployee" styleClass="List_Button3" onAction="#ListAll_ButtonEmployeeBtn">Employee</Button>
+            <Button fx:id="ListAll_ButtonDepartment" styleClass="List_Button4" onAction="#ListAll_ButtonDepartmentBtn">Department</Button>
+            <Button fx:id="ListAll_ButtonOffice" styleClass="List_Button5" onAction="#ListAll_ButtonOfficeBtn">Office</Button>
+        </HBox>
+    </VBox>
 
+    <VBox fx:id="listAll_ResultField" spacing="20" AnchorPane.bottomAnchor="80" AnchorPane.leftAnchor="50">
+        <Text style="-fx-fill: white"> All data retrieved will be under this box. Data column separated by ";" </Text>
+        <TextArea
+                fx:id="listAll_ResultField_TextAreaResult"
+                styleClass="listAll_ResultField_TextAreaResult"
+                prefWidth="550" prefHeight="300">
 
+        </TextArea>
+    </VBox>
 
-    </HBox>
 
 </AnchorPane>

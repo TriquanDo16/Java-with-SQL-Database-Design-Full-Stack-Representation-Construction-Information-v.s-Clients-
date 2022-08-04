@@ -40,7 +40,7 @@
         <Text fx:id="Find_TexOutput_ContainerIntro_Content" styleClass="Find_TexOutput_Container_Content" style="-fx-fill: white">Result will go here below:</Text>
     </VBox>
 
-    <VBox fx:id="Find_TexOutput_Container" styleClass="Find_TexOutput_Container" AnchorPane.bottomAnchor="180">
+    <VBox fx:id="Find_TexOutput_Container" styleClass="Find_TexOutput_Container" AnchorPane.bottomAnchor="180" AnchorPane.leftAnchor="50">
         <Text fx:id="Find_TexOutput_Container_Content" styleClass="Find_TexOutput_Container_Content" style="-fx-fill: white"></Text>
     </VBox>
 

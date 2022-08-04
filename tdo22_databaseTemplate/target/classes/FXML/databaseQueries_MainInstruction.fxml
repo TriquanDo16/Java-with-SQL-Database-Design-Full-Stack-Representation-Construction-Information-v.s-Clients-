@@ -15,15 +15,18 @@
             fx:controller="MyController"
             prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: midnightblue">
 
-    <VBox fx:id = "Container" styleClass="MainInstruction_Containers" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="150" spacing="15">
-        <VBox fx:id="Container_instruction">
+    <VBox fx:id = "Container" styleClass="MainInstruction_Containers" AnchorPane.topAnchor="90" AnchorPane.leftAnchor="150" spacing="25">
+        <VBox fx:id="Container_instruction" AnchorPane.topAnchor="60" AnchorPane.leftAnchor="150">
             <Text fx:id="Message_1" styleClass="Instruction_Message_1" style="-fx-fill: white"> What would you like to do?</Text>
         </VBox>
 
-        <HBox fx:id="Container_BtnFunctions" styleClass="Container_BtnFunctions" spacing="10" AnchorPane.rightAnchor="350">
+        <HBox fx:id="Container_BtnFunctions" styleClass="Container_BtnFunctions" spacing="10" AnchorPane.topAnchor="80" AnchorPane.leftAnchor="70">
             <Button fx:id="Container_BtnFunctions_BtnInsert" styleClass="Container_BtnFunctions_BtnInsert" onAction="#BtnInsert">Insert</Button>
             <Button fx:id="Container_BtnFunctions_BtnDelete" styleClass="Container_BtnFunctions_BtnDelete" onAction="#BtnDelete">Delete</Button>
             <Button fx:id="Container_BtnFunctions_BtnUpdate" styleClass="Container_BtnFunctions_BtnUpdate" onAction="#BtnUpdate">Update</Button>
+        </HBox>
+
+        <HBox fx:id="Container_BtnFunctions_2" styleClass="Container_BtnFunctions" spacing="10" AnchorPane.topAnchor="100" AnchorPane.leftAnchor="10">
             <Button fx:id="Container_BtnFunctions_BtnTableList" styleClass="Container_BtnFunctions_BtnTableList" onAction="#BtnTableList">List All</Button>
             <Button fx:id="Container_BtnFunctions_BtnTableFind" styleClass="Container_BtnFunctions_BtnTableFind" onAction="#BtnTableFind">Find</Button>
             <Button fx:id="Container_BtnFunctions_BtnStatistic" styleClass="Container_BtnFunctions_BtnStatistic" onAction="#BtnTableStatistic">Statss</Button>
